@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.1203.0 (24.11)"
+        "value": "2.138.1452.0 (24.11)"
       },
       {
         "name": "PBI_ProTooling",
@@ -2202,138 +2202,6 @@
                   }
                 ]
               },
-              "inpatient.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart inpatient",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ],
-                "Visibility": {
-                  "Value": "Hidden"
-                }
-              },
               "inpatient.patient_source_key": {
                 "Definition": {
                   "Binding": {
@@ -3424,138 +3292,6 @@
                     }
                   }
                 ]
-              },
-              "mart_CMSHCC_risk_factor.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart CMSHCC Risk Factors",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ],
-                "Visibility": {
-                  "Value": "Hidden"
-                }
               },
               "mart_CMSHCC_risk_factor.payment_year": {
                 "Definition": {
@@ -6692,135 +6428,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.485
-                    }
-                  }
-                ]
-              },
-              "mart_PQIs.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart PQIs",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
                     }
                   }
                 ]
@@ -10836,135 +10443,6 @@
                 "Visibility": {
                   "Value": "Hidden"
                 }
-              },
-              "mart_readmission.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart readmissions",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ]
               },
               "mart_readmission.readmission_admit_date.variation.date_hierarchy": {
                 "Definition": {
@@ -18488,145 +17966,6 @@
                   "Value": "Hidden"
                 }
               },
-              "member_month.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart member months",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "Member ID": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
-                  }
-                ]
-              },
               "member_month.payer": {
                 "Definition": {
                   "Binding": {
@@ -21223,135 +20562,6 @@
                   }
                 ]
               },
-              "numberof_condition.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart NumberofConditions",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ]
-              },
               "numberof_condition.patient_source_key": {
                 "Definition": {
                   "Binding": {
@@ -23511,142 +22721,6 @@
                   }
                 ]
               },
-              "patient.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart patient",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "NameType": "Identifier",
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "id": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ]
-              },
               "patient.race": {
                 "Definition": {
                   "Binding": {
@@ -24982,135 +24056,6 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.476
-                    }
-                  }
-                ]
-              },
-              "patient_risk_score.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart patient risk scores",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
                     }
                   }
                 ]
@@ -26535,145 +25480,6 @@
                   }
                 ]
               },
-              "query_1.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart patient risk",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "Member ID": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
-                    }
-                  }
-                ]
-              },
               "query_1.patient_risk_sk": {
                 "Definition": {
                   "Binding": {
@@ -27104,135 +25910,6 @@
                 "Visibility": {
                   "Value": "Hidden"
                 }
-              },
-              "tuva_chronic_condition.patient_id": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Mart tuva chronic conditions",
-                    "ConceptualProperty": "PATIENT_ID"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "patient id": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "PATIENT_ID": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  },
-                  {
-                    "patient": {
-                      "State": "Generated",
-                      "Weight": 0.97
-                    }
-                  },
-                  {
-                    "patient identification": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identity": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient identifier": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.75
-                    }
-                  },
-                  {
-                    "patient credential": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.727
-                    }
-                  },
-                  {
-                    "enduring": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "persevering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "longsuffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "long-suffering": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "forbearing": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  },
-                  {
-                    "good-natured": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.452
-                    }
-                  }
-                ]
               },
               "tuva_chronic_condition.patient_source_key": {
                 "Definition": {
@@ -45409,7 +44086,7 @@
             "value": "Navigation"
           }
         ],
-        "expression": "\"Fabric\" meta [IsParameterQuery=true, List={\"snowflake\", \"ODBC\", \"bigquery\", \"redshift\", \"Fabric\"}, DefaultValue=\"snowflake\", Type=\"Any\", IsParameterQueryRequired=true]",
+        "expression": "\"snowflake\" meta [IsParameterQuery=true, List={\"snowflake\", \"ODBC\", \"bigquery\", \"redshift\", \"Fabric\"}, DefaultValue=\"snowflake\", Type=\"Any\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "4fc385fa-8287-4bb1-a0d8-69393037463b"
       },
@@ -45512,22 +44189,6 @@
         "toTable": "Mart patient"
       },
       {
-        "name": "AutoDetected_b2fa8b39-c667-438c-bf4b-56de846b38ff",
-        "crossFilteringBehavior": "bothDirections",
-        "fromCardinality": "one",
-        "fromColumn": "PATIENT_ID",
-        "fromTable": "Mart patient risk scores",
-        "toColumn": "PATIENT_ID",
-        "toTable": "Mart patient"
-      },
-      {
-        "name": "AutoDetected_86205448-6d46-4968-adba-436145cebdcc",
-        "fromColumn": "PATIENT_ID",
-        "fromTable": "Mart inpatient",
-        "toColumn": "PATIENT_ID",
-        "toTable": "Mart patient"
-      },
-      {
         "name": "AutoDetected_96e6e8c1-0eb2-4a2d-ae11-05d3feb11844",
         "crossFilteringBehavior": "bothDirections",
         "fromColumn": "ENCOUNTER_ID",
@@ -45601,29 +44262,6 @@
         "fromTable": "Mart claims with enrollment",
         "toColumn": "DATA_SOURCE",
         "toTable": "Data Sources"
-      },
-      {
-        "name": "AutoDetected_669d78a6-6f29-4577-8d4e-07d17678c6da",
-        "fromColumn": "PATIENT_ID",
-        "fromTable": "Mart CMSHCC Risk Factors",
-        "toColumn": "PATIENT_ID",
-        "toTable": "Mart patient"
-      },
-      {
-        "name": "AutoDetected_94dd4ed7-a0ad-46e9-8616-4e628edf8526",
-        "fromColumn": "PATIENT_ID",
-        "fromTable": "Mart tuva chronic conditions",
-        "isActive": false,
-        "toColumn": "PATIENT_ID",
-        "toTable": "Mart NumberofConditions"
-      },
-      {
-        "name": "AutoDetected_c423ff9a-38a4-4fc6-ac89-75f2fbe52a7a",
-        "fromColumn": "PATIENT_ID",
-        "fromTable": "Mart CMSHCC Risk Factors",
-        "isActive": false,
-        "toColumn": "PATIENT_ID",
-        "toTable": "Mart NumberofConditions"
       },
       {
         "name": "AutoDetected_19afea01-a04a-46dc-992e-2bb3a9e21d09",
@@ -46223,7 +44861,7 @@
           },
           {
             "name": "TotalMembers",
-            "expression": "distinctcount('Mart member months'[PATIENT_ID])",
+            "expression": "distinctcount('Mart member months'[PERSON_ID])",
             "formatString": "#,0",
             "lineageTag": "0d2e31ee-5b0d-42ff-a0ea-590e728c2393"
           },
@@ -46405,7 +45043,7 @@
           },
           {
             "name": "Total Patient Risk Members",
-            "expression": "DISTINCTCOUNT('Mart patient risk'[PATIENT_ID])",
+            "expression": "DISTINCTCOUNT('Mart patient risk'[PERSON_ID])",
             "formatString": "#,0",
             "lineageTag": "353b73ee-acee-4295-9bb0-b2266a001be7"
           },
@@ -46452,19 +45090,6 @@
           }
         ],
         "columns": [
-          {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "81b90cc9-7754-4d67-a681-dd6b3432b291",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
           {
             "name": "YEAR_MONTH",
             "annotations": [
@@ -46593,6 +45218,19 @@
             "dataType": "string",
             "lineageTag": "e21d74ff-3c4d-4afd-b001-d33f71de479b",
             "sourceColumn": "PHARMACY_PAID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "32f0e494-a507-47a7-8b45-ba5e4f28e1fe",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
@@ -46962,19 +45600,6 @@
         ],
         "columns": [
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "0539c491-3c1a-4e08-9488-0a78d7e4a80a",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "FIRST_NAME",
             "annotations": [
               {
@@ -47196,6 +45821,19 @@
             "summarizeBy": "none"
           },
           {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bc58a40f-8eab-4285-b065-63533b9a4895",
+            "sourceColumn": "PATIENT_ID",
+            "summarizeBy": "none"
+          },
+          {
             "name": "PATIENT_AGE",
             "annotations": [
               {
@@ -47204,7 +45842,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "408f5676-b4cd-4ba2-9d02-33b4ffa0f480",
+            "lineageTag": "e80d99b9-e422-41c3-88c1-a96bf08a1cc5",
             "sourceColumn": "PATIENT_AGE",
             "summarizeBy": "none"
           }
@@ -47252,19 +45890,6 @@
         ],
         "columns": [
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "0c932e60-d7e4-4eae-a978-915df189b1c5",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "DATA_SOURCE",
             "annotations": [
               {
@@ -47304,6 +45929,19 @@
             "summarizeBy": "none"
           },
           {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7ac239a8-b3fb-4f89-9a0d-9bbb8a4760da",
+            "sourceColumn": "PATIENT_ID",
+            "summarizeBy": "none"
+          },
+          {
             "name": "CONDITION_FAMILY",
             "annotations": [
               {
@@ -47312,7 +45950,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "99c8d670-b96e-4b15-a8d8-6e7b028d7fb9",
+            "lineageTag": "45ea4872-21ba-43bf-b3db-34395fef1086",
             "sourceColumn": "CONDITION_FAMILY",
             "summarizeBy": "none"
           }
@@ -47360,19 +45998,6 @@
         ],
         "columns": [
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "c14fff27-8747-4b66-bb0a-6cb1b1ea1a5b",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "DATA_SOURCE",
             "annotations": [
               {
@@ -47409,6 +46034,19 @@
             "dataType": "string",
             "lineageTag": "99adcd88-38a6-41e8-a0d2-08d1b1a34d4c",
             "sourceColumn": "NUMOFCONDITIONS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "625245d5-67fb-4669-9546-571a082fa508",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
@@ -47458,19 +46096,6 @@
           }
         ],
         "columns": [
-          {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "df60dbba-ca3e-4c0d-8075-f2856b61c8c3",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
           {
             "name": "V24_RISK_SCORE",
             "annotations": [
@@ -47561,6 +46186,19 @@
             "lineageTag": "07ad602d-fe4e-479e-8774-a161b19be784",
             "sourceColumn": "TUVA_LAST_RUN",
             "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7bbf687d-719c-4f1c-9c90-8f1106cff18e",
+            "sourceColumn": "PATIENT_ID",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "77e27c40-bace-408f-bddd-507a280cbdb4",
@@ -47620,19 +46258,6 @@
             "dataType": "string",
             "lineageTag": "bc031f47-31d9-49df-b4da-e4187119c058",
             "sourceColumn": "ENCOUNTER_ID",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "e5c4ebd5-7460-4d73-ae08-8140a8028901",
-            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           },
           {
@@ -47699,6 +46324,19 @@
             "lineageTag": "fb5b0002-437e-4409-a7b7-1a9d65fa0e9b",
             "sourceColumn": "ENCOUNTER_SOURCE_KEY",
             "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0c4f63ca-434f-4a90-9001-2953d96b41a6",
+            "sourceColumn": "PATIENT_ID",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "de36fa1f-34a9-45a9-ac4e-5384ab27066a",
@@ -47757,19 +46395,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "b1578a5c-043d-45f4-a4d3-fe036de534ab",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "ADMIT_DATE",
             "annotations": [
               {
@@ -47793,6 +46418,19 @@
             "dataType": "string",
             "lineageTag": "71a0d97a-18e6-4ea0-928c-de67fe1c87ca",
             "sourceColumn": "DISCHARGE_DATE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00c3fc35-3e27-41a1-992b-a0dbdd31ca94",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
@@ -47899,7 +46537,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "a290db51-7ac7-461f-a0b3-bd9246522da2",
+            "lineageTag": "50e19389-8d0e-4809-a720-2a5c8c24644e",
             "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           },
@@ -47912,7 +46550,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "1406a1c4-73b9-462f-a0a6-0f13ec0ed42a",
+            "lineageTag": "86d865a3-7693-4495-81d2-a246059571c1",
             "sourceColumn": "ENCOUNTER_END_DATE",
             "summarizeBy": "none"
           }
@@ -48361,19 +46999,6 @@
         ],
         "columns": [
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "08131a7a-edbd-4c75-bb52-35cc7df9df9c",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "FACTOR_TYPE",
             "annotations": [
               {
@@ -48449,6 +47074,19 @@
             "dataType": "string",
             "lineageTag": "81b0235a-319f-41a8-b692-e2d0ceea2b6d",
             "sourceColumn": "COEFFICIENT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b050b631-c9e9-4622-932e-c8748b2c8478",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
@@ -48611,7 +47249,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "1ad1fcb9-fce5-4cba-b861-191cea4ca183",
+            "lineageTag": "d5139fe9-fd4c-48d3-a5c8-4f41acc36ab9",
             "sourceColumn": "PAITENT_ID",
             "summarizeBy": "none"
           }
@@ -48676,19 +47314,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "d7d078de-9d50-4007-aa32-3865b376cb74",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "MODEL_VERSION",
             "annotations": [
               {
@@ -48712,6 +47337,19 @@
             "dataType": "string",
             "lineageTag": "c2351145-4b52-4b9b-ac01-b719ba04c3a9",
             "sourceColumn": "PATIENT_RISK_SK",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "17455a8f-4930-46ba-aea1-1b756837a1e1",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
@@ -48823,19 +47461,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "PATIENT_ID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "95f4c38d-7d2c-4032-9df9-7a6cd5a377c6",
-            "sourceColumn": "PATIENT_ID",
-            "summarizeBy": "none"
-          },
-          {
             "name": "FACILITY_ID",
             "annotations": [
               {
@@ -48924,6 +47549,19 @@
             "dataType": "string",
             "lineageTag": "7af72b24-5d21-441c-a7df-21110a544689",
             "sourceColumn": "PAID_AMOUNT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PATIENT_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "030b24a1-e0a7-496f-a6ee-7c46208f4940",
+            "sourceColumn": "PATIENT_ID",
             "summarizeBy": "none"
           }
         ],
