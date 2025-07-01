@@ -1,0 +1,143 @@
+table measure_table
+	lineageTag: 449f53d6-7c95-4627-a997-9dc1c4ddbab2
+
+	measure 'Actual Discharge Home Percent' = ```
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(unpivot_inpatient[discharge_location_long]),
+			        unpivot_inpatient[discharge_location] = "home",
+			        unpivot_inpatient[eva] = "actual"
+			    ),
+			    DISTINCTCOUNT(unpivot_inpatient[encounter_id]),
+			    0
+			)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e596268b-7a70-4f7b-ab7c-a1b7ce258f93
+
+	measure 'Actual LOS' = average(inpatient[actual_los])
+		lineageTag: f957348b-d8f3-4b23-93a2-789fb73cdd76
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Actual Readmission' = ```
+			
+			DIVIDE(
+			  CALCULATE(
+			    SUM(inpatient[actual_readmission]),
+			    inpatient[readmission_denominator] = 1
+			  ),
+			  CALCULATE(
+			    SUM(inpatient[readmission_denominator]),
+			    inpatient[readmission_denominator] = 1
+			  ),
+			  0
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9e62319c-549c-436d-9202-8bea7053ccea
+
+	measure encounter_count = count(inpatient[encounter_id])
+		formatString: #,0
+		lineageTag: bfd0307f-69da-4dc9-8be6-2a63469ef5fc
+
+	measure 'Expected Discharge Home Percent' = ```
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(unpivot_inpatient[discharge_location_long]),
+			        unpivot_inpatient[discharge_location] = "home",
+			        unpivot_inpatient[eva] = "expected"
+			    ),
+			    DISTINCTCOUNT(unpivot_inpatient[encounter_id]),
+			    0
+			)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 54dc5fc7-d705-4cf2-893f-9e7c73b281bf
+
+	measure 'Expected LOS' = average(inpatient[expected_los])
+		lineageTag: db0482ea-43be-4457-b178-ed8d54552a54
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Expected Readmission' = ```
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(inpatient[expected_readmission]),
+			        inpatient[readmission_denominator] = 1
+			    ),
+			    CALCULATE(
+			        SUM(inpatient[readmission_denominator]),
+			        inpatient[readmission_denominator] = 1
+			    )
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bacd7f03-9780-4cce-a808-1e7294fcbfd5
+
+	measure 'Inpatient Paid Amount' = sum(inpatient[paid_amount])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 4d543efa-f85b-49b1-9bec-da11bc56d28c
+
+	measure actual_pmpm = sum(member_month[actual_paid_amount])/[member_months]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 51cec6da-3817-4970-a980-fbdd75a1dbd2
+
+	measure member_months = count(member_month[data_source])
+		formatString: #,0
+		lineageTag: 8184f44f-9078-48a7-8cc5-6c2823a42801
+
+	measure 'Total Actual' = sum(member_month[actual_paid_amount])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 36976965-f0d3-412c-8404-473874f99d8e
+
+	measure 'Total Difference' = [Total Actual] - [Total Expected]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: f6996b5f-c393-496a-ac15-c191fca27a6e
+
+	measure 'Total Expected' = sum(member_month[expected_paid_amount])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 8088e861-05ec-40e8-ba57-642e14038cab
+
+	measure unpivot = (sum(unpivot_member_month[value])/COUNTROWS(unpivot_member_month)) *12000
+		lineageTag: ecaf90fc-c652-40ca-a483-93c742c4533b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure expected_pmpm = ```
+			sum(member_month[expected_paid_amount])/[member_months] 
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 26c37ee1-8c34-4f77-9c97-4aa2717cfb9f
+
+	measure Difference = [actual_pmpm] - [expected_pmpm]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 174ee2b7-37b0-4e85-84f2-801bf0543605
+
+	measure Inpatient_Fill_Rate_Diff = average(inpatient_feature_freq[positive_rate_percent]) - average(inpatient_feature_freq[training_set_fill_rate])
+		lineageTag: c1a6a3d2-025b-49e5-8d83-d6998dedd373
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Value
+		formatString: 0
+		lineageTag: 5c8e266b-0323-4ff3-9987-0d003da7364d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition measure_table = calculated
+		mode: import
+		source = {1}
+
+	annotation PBI_Id = 8b8e4a9266b74331a75095cd239115f5
+

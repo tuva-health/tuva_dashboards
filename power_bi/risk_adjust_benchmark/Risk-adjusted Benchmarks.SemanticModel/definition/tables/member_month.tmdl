@@ -1,0 +1,1811 @@
+table member_month
+	lineageTag: 5ac964bf-8487-4ac4-84d3-50b67917c2e9
+
+	column year_month
+		dataType: string
+		lineageTag: 1452e318-5dcb-43ab-a0f7-af30eb2740c6
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_day_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0cc963fd-36fd-449d-b712-da81a21658b2
+		summarizeBy: none
+		sourceColumn: first_day_of_month
+
+		variation Variation
+			isDefault
+			relationship: 7dad3bb0-3391-4d67-86fd-856f537ed2dc
+			defaultHierarchy: LocalDateTable_e2eb678b-e0c2-40e3-b3a2-9e65fcaaa515.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column person_id
+		dataType: string
+		lineageTag: 435266b9-abdd-4609-a304-8b8fa5cc40ef
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer
+		dataType: string
+		lineageTag: bb65075e-e31b-4c87-8dab-366fea207aa9
+		summarizeBy: none
+		sourceColumn: payer
+
+		annotation SummarizationSetBy = Automatic
+
+	column plan
+		dataType: string
+		lineageTag: a00f77a5-189c-4de6-b320-b0e343f647a9
+		summarizeBy: none
+		sourceColumn: plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source
+		dataType: string
+		lineageTag: 78bf8d3f-c7a2-4419-8cb1-3b16a70fa82e
+		summarizeBy: none
+		sourceColumn: data_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column benchmark_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dcc6bb1-45b4-44d5-ba80-9574cc5ea976
+		summarizeBy: sum
+		sourceColumn: benchmark_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column tuva_last_run
+		dataType: string
+		lineageTag: 38536518-58ab-4a48-8fd1-386ce26bdd43
+		summarizeBy: none
+		sourceColumn: tuva_last_run
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_paid_amount
+		dataType: double
+		lineageTag: 19109bfa-785e-4a3a-9507-45b5bb14bddf
+		summarizeBy: sum
+		sourceColumn: actual_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_paid_amount
+		dataType: double
+		lineageTag: d357c8d9-ebf4-4acd-85dd-63d776f5d8a7
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_paid_amount
+		dataType: double
+		lineageTag: b59a4d7f-d03f-4d1d-9750-d04410be1f17
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_based_paid_amount
+		dataType: double
+		lineageTag: 7cc25ab4-4496-4e49-972d-bce9107d87b0
+		summarizeBy: sum
+		sourceColumn: actual_office_based_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_other_paid_amount
+		dataType: double
+		lineageTag: b751d45b-9226-491a-b4c7-ed81897c7ccb
+		summarizeBy: sum
+		sourceColumn: actual_other_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_paid_amount
+		dataType: double
+		lineageTag: f64ea8a7-a770-491f-abb3-e7f979641887
+		summarizeBy: sum
+		sourceColumn: expected_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_paid_amount
+		dataType: double
+		lineageTag: ceea096a-bf14-4d64-b5fd-1147eb159839
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_paid_amount
+		dataType: double
+		lineageTag: af514d4e-9931-47f4-84aa-d350f2c08e72
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_based_paid_amount
+		dataType: double
+		lineageTag: 5e55350f-20af-407a-9b33-2680d2e1c203
+		summarizeBy: sum
+		sourceColumn: expected_office_based_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_other_paid_amount
+		dataType: double
+		lineageTag: d10a0452-6e3f-4b5d-8f27-7035562cfb0f
+		summarizeBy: sum
+		sourceColumn: expected_other_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bc9bedb-c5e2-44b7-ad69-5e78b7cdd57c
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_outpatient_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: cc569547-af03-46a5-bf91-ca22e18fc3ec
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_office_based_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8764bc59-30bc-4dda-be86-0954d231a82e
+		summarizeBy: sum
+		sourceColumn: actual_office_based_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_other_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 3eb7a4df-a21e-49e1-a676-bc13531970e1
+		summarizeBy: sum
+		sourceColumn: actual_other_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_acute_inpatient_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: d33e56a9-1001-4c1a-bd34-500495e6bf67
+		summarizeBy: sum
+		sourceColumn: actual_acute_inpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_ed_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: e26f7831-d453-40d6-93dc-a820a3fe978a
+		summarizeBy: sum
+		sourceColumn: actual_ed_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_inpatient_skilled_nursing_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 12a9d636-d3b4-4b88-b728-f8881a15d338
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_skilled_nursing_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_office_visit_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b48e330-1a84-46c5-aae5-5650e2e5c272
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_home_health_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 023e1daa-5413-41a8-b50f-27ff93b9002f
+		summarizeBy: sum
+		sourceColumn: actual_home_health_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_snf_encounter_count
+		dataType: int64
+		formatString: 0
+		lineageTag: c4bb8882-7d0f-4d9e-972b-45eb3de29178
+		summarizeBy: sum
+		sourceColumn: actual_snf_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_inpatient_encounter_count
+		dataType: double
+		lineageTag: c2e4323f-016d-41f2-82af-169cb107dcaa
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_encounter_count
+		dataType: double
+		lineageTag: 86f3ae0c-9702-4201-b7af-df89ddd82e75
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_based_encounter_count
+		dataType: double
+		lineageTag: 3a527450-8bf4-455a-b56b-fc09bc5c339a
+		summarizeBy: sum
+		sourceColumn: expected_office_based_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_other_encounter_count
+		dataType: double
+		lineageTag: 5bd56ee8-18c1-4c6b-b54a-d5ad09982cfa
+		summarizeBy: sum
+		sourceColumn: expected_other_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_acute_inpatient_encounter_count
+		dataType: double
+		lineageTag: 1516f77a-ab83-4a95-a5c8-cc90cb3d9f22
+		summarizeBy: sum
+		sourceColumn: expected_acute_inpatient_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_ed_encounter_count
+		dataType: double
+		lineageTag: 3f68e418-c218-4f57-9351-17a6733b362f
+		summarizeBy: sum
+		sourceColumn: expected_ed_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_skilled_nursing_encounter_count
+		dataType: double
+		lineageTag: 75d958ea-26e5-4912-b5a5-e0d0d5532cb9
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_skilled_nursing_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_encounter_count
+		dataType: double
+		lineageTag: 375d2d65-d366-4f1d-a088-13e11ecd5e2e
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_home_health_encounter_count
+		dataType: double
+		lineageTag: 2b41b47b-97ea-4edf-b8fb-e3fc7f3226b7
+		summarizeBy: sum
+		sourceColumn: expected_home_health_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_snf_encounter_count
+		dataType: double
+		lineageTag: f4ba7837-2a7d-44a9-93f9-08f99bb31855
+		summarizeBy: sum
+		sourceColumn: expected_snf_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_acute_inpatient_paid_amount
+		dataType: double
+		lineageTag: 4b010929-45c9-45c1-ae6a-b48cd5665fa1
+		summarizeBy: sum
+		sourceColumn: actual_acute_inpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_ambulance_orphaned_paid_amount
+		dataType: double
+		lineageTag: 6f0e36bc-9b8b-4b17-bdb5-9f9d55eff98e
+		summarizeBy: sum
+		sourceColumn: actual_ambulance_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_ambulatory_surgery_center_paid_amount
+		dataType: double
+		lineageTag: b1f385dc-b579-41a0-a2d6-d03d5ad7163e
+		summarizeBy: sum
+		sourceColumn: actual_ambulatory_surgery_center_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_dialysis_paid_amount
+		dataType: double
+		lineageTag: 18205537-cdce-404b-8b7f-5671e5d3416b
+		summarizeBy: sum
+		sourceColumn: actual_dialysis_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_dme_orphaned_paid_amount
+		dataType: double
+		lineageTag: 5de42909-caa4-4431-a4c2-acbb85cf45ae
+		summarizeBy: sum
+		sourceColumn: actual_dme_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_emergency_department_paid_amount
+		dataType: double
+		lineageTag: 7575faab-fb10-4da5-abfa-2f51183a13bc
+		summarizeBy: sum
+		sourceColumn: actual_emergency_department_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_home_health_paid_amount
+		dataType: double
+		lineageTag: af1f293d-0b8e-4144-933b-db6a8965dfab
+		summarizeBy: sum
+		sourceColumn: actual_home_health_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_hospice_paid_amount
+		dataType: double
+		lineageTag: dcccc1f6-54e3-4767-a8ef-e2b62cb18f7c
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_hospice_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_long_term_acute_care_paid_amount
+		dataType: double
+		lineageTag: 3369c71e-b823-4458-9cf5-cdc6db495942
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_long_term_acute_care_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_psych_paid_amount
+		dataType: double
+		lineageTag: eac223f2-ac5e-443b-b91a-31992d916eb7
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_psych_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_rehabilitation_paid_amount
+		dataType: double
+		lineageTag: fb89c2bb-9ebf-49e4-b08c-91dd82e28839
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_rehabilitation_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_skilled_nursing_paid_amount
+		dataType: double
+		lineageTag: 448ce5d5-e10e-4a14-b5a4-18ce9331ccfb
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_skilled_nursing_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_substance_use_paid_amount
+		dataType: double
+		lineageTag: 04dd41d2-2a1d-43b4-a5f8-ab9b6bdb07f1
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_substance_use_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_lab_orphaned_paid_amount
+		dataType: double
+		lineageTag: b0332777-598d-4ded-b572-8da67cdde005
+		summarizeBy: sum
+		sourceColumn: actual_lab_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_paid_amount
+		dataType: double
+		lineageTag: afc59ec7-e3bd-4c0f-96b9-993ad5fc1d40
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_other_paid_amount
+		dataType: double
+		lineageTag: b71e406e-92b1-4b8b-9c3a-7bfdf0d99260
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_other_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_injections_paid_amount
+		dataType: double
+		lineageTag: 32395b0b-2589-4273-8800-cf433c9da97a
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_injections_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_pt_ot_st_paid_amount
+		dataType: double
+		lineageTag: c7518c1b-57a7-4b2b-83ef-da8e816a64f1
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_pt_ot_st_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_radiology_paid_amount
+		dataType: double
+		lineageTag: c4187dd2-105a-4ba9-891e-b176728c7f18
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_radiology_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_surgery_paid_amount
+		dataType: double
+		lineageTag: d8bf2ada-77bc-497b-87be-b69c7b94c318
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_surgery_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_orphaned_claim_paid_amount
+		dataType: double
+		lineageTag: 30856d50-3811-48ab-8169-2ee119d77ae2
+		summarizeBy: sum
+		sourceColumn: actual_orphaned_claim_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_hospice_paid_amount
+		dataType: double
+		lineageTag: 84a9eeed-2d05-4b9d-97d3-1e9428a89e9b
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_hospice_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_hospital_or_clinic_paid_amount
+		dataType: double
+		lineageTag: a69057b6-dff1-4b30-81d5-c51e2228ca8c
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_hospital_or_clinic_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_injections_paid_amount
+		dataType: double
+		lineageTag: ed2e54d3-cb9f-48dd-a627-aa5986746c54
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_injections_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_psych_paid_amount
+		dataType: double
+		lineageTag: ce495b6f-5f7b-4421-8f27-c7c6d7022f5b
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_psych_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_pt_ot_st_paid_amount
+		dataType: double
+		lineageTag: 061f1cf7-3a74-4c3a-9958-c9c5219aa573
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_pt_ot_st_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_radiology_paid_amount
+		dataType: double
+		lineageTag: e940fb01-6f1e-435c-8c19-3aeb5acec7c9
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_radiology_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_rehabilitation_paid_amount
+		dataType: double
+		lineageTag: ef702fb8-c822-4e75-b4e6-fa60c42a8a8c
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_rehabilitation_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_substance_use_paid_amount
+		dataType: double
+		lineageTag: 6c19ed4a-7c6d-4b98-9423-e58dfdf304fd
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_substance_use_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_surgery_paid_amount
+		dataType: double
+		lineageTag: 353d055e-4f83-469d-98ae-215200ae792c
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_surgery_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_telehealth_paid_amount
+		dataType: double
+		lineageTag: 923e6f1f-8549-4d3e-b93e-b3b56371332e
+		summarizeBy: sum
+		sourceColumn: actual_telehealth_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_urgent_care_paid_amount
+		dataType: double
+		lineageTag: dca5d8e8-1203-4dc7-9a1d-ec9ff2c751ae
+		summarizeBy: sum
+		sourceColumn: actual_urgent_care_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_acute_inpatient_paid_amount
+		dataType: double
+		lineageTag: c6109251-ef6e-4061-982b-d71984159b00
+		summarizeBy: sum
+		sourceColumn: expected_acute_inpatient_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_ambulance_orphaned_paid_amount
+		dataType: double
+		lineageTag: 40efe31c-507f-4a14-8ef7-af670c772679
+		summarizeBy: sum
+		sourceColumn: expected_ambulance_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_ambulatory_surgery_center_paid_amount
+		dataType: double
+		lineageTag: dd10e886-be65-46a8-a399-10222e5e56f9
+		summarizeBy: sum
+		sourceColumn: expected_ambulatory_surgery_center_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_dialysis_paid_amount
+		dataType: double
+		lineageTag: c5ad3dae-265f-448f-b71a-0c8a0ab930cd
+		summarizeBy: sum
+		sourceColumn: expected_dialysis_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_dme_orphaned_paid_amount
+		dataType: double
+		lineageTag: 449fd595-e306-426a-a498-e2fe197ff4ce
+		summarizeBy: sum
+		sourceColumn: expected_dme_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_emergency_department_paid_amount
+		dataType: double
+		lineageTag: 1a558164-f7c4-4358-8eaf-c8f7d1c9ee7d
+		summarizeBy: sum
+		sourceColumn: expected_emergency_department_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_home_health_paid_amount
+		dataType: double
+		lineageTag: 1216541c-49df-477d-9da6-549bb59db98b
+		summarizeBy: sum
+		sourceColumn: expected_home_health_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_hospice_paid_amount
+		dataType: double
+		lineageTag: 6fdae5b1-b1a3-4f49-83c9-43037045ff58
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_hospice_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_long_term_acute_care_paid_amount
+		dataType: int64
+		lineageTag: 57923c4a-bafc-4382-b6b4-2319f15cad39
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_long_term_acute_care_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_psych_paid_amount
+		dataType: double
+		lineageTag: 2781a39e-1b5b-4d9f-8d3a-d3ada9a11be3
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_psych_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_rehabilitation_paid_amount
+		dataType: double
+		lineageTag: 47f17ba9-7b88-47fb-802d-471666a1b5c1
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_rehabilitation_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_skilled_nursing_paid_amount
+		dataType: double
+		lineageTag: 692fea8d-2349-4ad2-a1f4-23460db68a31
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_skilled_nursing_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_substance_use_paid_amount
+		dataType: int64
+		lineageTag: a7e802ad-17ee-40af-b9b8-83849a924654
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_substance_use_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_lab_orphaned_paid_amount
+		dataType: double
+		lineageTag: c3a30157-fd41-4948-81ea-5bd83f02cfe6
+		summarizeBy: sum
+		sourceColumn: expected_lab_orphaned_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_paid_amount
+		dataType: double
+		lineageTag: 93e5e375-be8d-4b26-8186-a5310559760e
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_other_paid_amount
+		dataType: double
+		lineageTag: 76afb3f1-c871-417d-969d-081eb1e886ed
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_other_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_injections_paid_amount
+		dataType: double
+		lineageTag: 65f76d25-9221-4402-849e-2339dc97a82b
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_injections_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_pt_ot_st_paid_amount
+		dataType: double
+		lineageTag: 41e58882-47b6-4f78-a9c4-12cfdc89c0b8
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_pt_ot_st_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_radiology_paid_amount
+		dataType: double
+		lineageTag: 200c2447-517c-4775-925c-3aea9231d365
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_radiology_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_surgery_paid_amount
+		dataType: double
+		lineageTag: ec1cdb22-2f50-41e0-8334-0f330f97a5ef
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_surgery_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_orphaned_claim_paid_amount
+		dataType: double
+		lineageTag: 03e50113-21b9-4355-82cb-0cce99e0650f
+		summarizeBy: sum
+		sourceColumn: expected_orphaned_claim_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_hospice_paid_amount
+		dataType: double
+		lineageTag: 829616ea-e6ec-4261-bcbf-959a4413d204
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_hospice_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_hospital_or_clinic_paid_amount
+		dataType: double
+		lineageTag: 9aeb8d26-6b0f-4da3-a523-ec51c8553c65
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_hospital_or_clinic_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_injections_paid_amount
+		dataType: double
+		lineageTag: 1af46f11-1830-4018-ba7f-6b8100cd7fae
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_injections_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_psych_paid_amount
+		dataType: double
+		lineageTag: 3b055f57-1053-46fc-8292-4680c3b0a89d
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_psych_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_pt_ot_st_paid_amount
+		dataType: double
+		lineageTag: 225b07a0-e725-4c11-ae5f-083dfd633a3b
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_pt_ot_st_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_radiology_paid_amount
+		dataType: double
+		lineageTag: fb5faf79-4075-451c-8406-8e7cea1e2412
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_radiology_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_rehabilitation_paid_amount
+		dataType: double
+		lineageTag: 9c550813-4a51-4fff-b5ba-dd138d7e95e7
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_rehabilitation_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_substance_use_paid_amount
+		dataType: int64
+		lineageTag: 7d5f22e6-3186-416d-898e-b3e304624168
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_substance_use_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_surgery_paid_amount
+		dataType: double
+		lineageTag: 2e61b46a-e154-451c-9ae9-73200bfe909b
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_surgery_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_telehealth_paid_amount
+		dataType: double
+		lineageTag: 95878591-0c71-4b38-95fa-b63d7a749623
+		summarizeBy: sum
+		sourceColumn: expected_telehealth_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_urgent_care_paid_amount
+		dataType: double
+		lineageTag: a48248a9-f384-4989-804b-0fe349058bc6
+		summarizeBy: sum
+		sourceColumn: expected_urgent_care_paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_ambulance_orphaned_encounter_count
+		dataType: int64
+		lineageTag: 08b81f0e-90a8-4994-99cf-9442e6a15ab8
+		summarizeBy: sum
+		sourceColumn: actual_ambulance_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_ambulatory_surgery_center_encounter_count
+		dataType: int64
+		lineageTag: af9da350-1016-440b-aa06-5d3d662d18c3
+		summarizeBy: sum
+		sourceColumn: actual_ambulatory_surgery_center_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_dialysis_encounter_count
+		dataType: int64
+		lineageTag: 28f9dccb-c1ab-40be-9a1e-28b96532d095
+		summarizeBy: sum
+		sourceColumn: actual_dialysis_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_dme_orphaned_encounter_count
+		dataType: int64
+		lineageTag: 488138a8-d811-4690-a72e-879e14f3a081
+		summarizeBy: sum
+		sourceColumn: actual_dme_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_emergency_department_encounter_count
+		dataType: int64
+		lineageTag: 345092a5-8a25-403a-a44b-a98ed584fe29
+		summarizeBy: sum
+		sourceColumn: actual_emergency_department_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_hospice_encounter_count
+		dataType: int64
+		lineageTag: f660a4f3-4603-4e70-ae94-1974538f7ca7
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_hospice_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_long_term_acute_care_encounter_count
+		dataType: int64
+		lineageTag: cd74ad3d-e65b-4d2b-94a2-ae3dd577e403
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_long_term_acute_care_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_psych_encounter_count
+		dataType: int64
+		lineageTag: d1c6f8fb-d0fb-4f3c-8921-ad49d4c037b6
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_psych_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_rehabilitation_encounter_count
+		dataType: int64
+		lineageTag: ac3283c0-4b48-41e7-9cd1-6cc6dc1289be
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_rehabilitation_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_inpatient_substance_use_encounter_count
+		dataType: int64
+		lineageTag: 3441c4ca-4f1e-4141-b833-8e6de31996c3
+		summarizeBy: sum
+		sourceColumn: actual_inpatient_substance_use_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_lab_orphaned_encounter_count
+		dataType: int64
+		lineageTag: 7601dad7-5588-4ea8-81f0-569055f7d53b
+		summarizeBy: sum
+		sourceColumn: actual_lab_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_other_encounter_count
+		dataType: int64
+		lineageTag: 26ea6d0a-5297-4b27-bdae-2d8d9d16e59d
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_other_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_injections_encounter_count
+		dataType: int64
+		lineageTag: 5fee8689-e736-4d04-8cfc-701e7393505f
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_injections_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_pt_ot_st_encounter_count
+		dataType: int64
+		lineageTag: 337e423c-7159-4644-8984-52a2e934acef
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_pt_ot_st_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_radiology_encounter_count
+		dataType: int64
+		lineageTag: 8ac905ad-c7aa-4e14-a236-973304428bc0
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_radiology_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_office_visit_surgery_encounter_count
+		dataType: int64
+		lineageTag: 5fe999cc-1597-40ae-8a44-201400e17455
+		summarizeBy: sum
+		sourceColumn: actual_office_visit_surgery_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_orphaned_claim_encounter_count
+		dataType: int64
+		lineageTag: 15c9d025-224c-4c99-a9a7-e098248b1ea5
+		summarizeBy: sum
+		sourceColumn: actual_orphaned_claim_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_hospice_encounter_count
+		dataType: int64
+		lineageTag: c45f3cfd-81e4-4a74-80ec-dca49dbe80a5
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_hospice_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_hospital_or_clinic_encounter_count
+		dataType: int64
+		lineageTag: f41cd144-de25-48ac-91fa-42a184eb30d9
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_hospital_or_clinic_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_injections_encounter_count
+		dataType: int64
+		lineageTag: ca71cd58-f6f1-437a-be89-e6a0c2f40044
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_injections_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_psych_encounter_count
+		dataType: int64
+		lineageTag: eed57175-af76-488c-8c59-1e97d62ddc62
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_psych_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_pt_ot_st_encounter_count
+		dataType: int64
+		lineageTag: 0842ae05-71cd-4407-ae01-82358e4c3cff
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_pt_ot_st_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_radiology_encounter_count
+		dataType: int64
+		lineageTag: e1102a4b-a8b0-46db-a854-0891d7fff945
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_radiology_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_rehabilitation_encounter_count
+		dataType: int64
+		lineageTag: ebb7388c-8e20-4d21-bd8d-107bcda906be
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_rehabilitation_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_substance_use_encounter_count
+		dataType: int64
+		lineageTag: 4345b380-4fbb-4a6e-899a-141fa7f1ac47
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_substance_use_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_outpatient_surgery_encounter_count
+		dataType: int64
+		lineageTag: 68061a1f-3a2b-4594-b136-0dbdcbac0228
+		summarizeBy: sum
+		sourceColumn: actual_outpatient_surgery_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_telehealth_encounter_count
+		dataType: int64
+		lineageTag: d413f5c7-17b6-479e-8c37-48e47cc1205a
+		summarizeBy: sum
+		sourceColumn: actual_telehealth_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_urgent_care_encounter_count
+		dataType: int64
+		lineageTag: d4137f06-e401-4afe-a2e8-07ab6bbf4509
+		summarizeBy: sum
+		sourceColumn: actual_urgent_care_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_ambulance_orphaned_encounter_count
+		dataType: double
+		lineageTag: 22263ed0-7174-4130-866a-853ca6683b2b
+		summarizeBy: sum
+		sourceColumn: expected_ambulance_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_ambulatory_surgery_center_encounter_count
+		dataType: double
+		lineageTag: 118f9e39-955c-49d7-90ee-c7b8f9503f6d
+		summarizeBy: sum
+		sourceColumn: expected_ambulatory_surgery_center_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_dialysis_encounter_count
+		dataType: double
+		lineageTag: ba2b52a8-97b0-4ea6-84d4-124980459dfe
+		summarizeBy: sum
+		sourceColumn: expected_dialysis_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_dme_orphaned_encounter_count
+		dataType: double
+		lineageTag: 12742a6a-b67b-4712-a54e-b294c48e95ee
+		summarizeBy: sum
+		sourceColumn: expected_dme_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_emergency_department_encounter_count
+		dataType: double
+		lineageTag: 30206c6d-2535-419f-a81f-d55c0cad3953
+		summarizeBy: sum
+		sourceColumn: expected_emergency_department_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_hospice_encounter_count
+		dataType: double
+		lineageTag: 094f3b1b-c144-4393-a31a-92b7e43db397
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_hospice_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_long_term_acute_care_encounter_count
+		dataType: int64
+		lineageTag: c544c712-130e-4934-a258-0021b7fea587
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_long_term_acute_care_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_psych_encounter_count
+		dataType: double
+		lineageTag: 44d7d999-d2d4-48ce-a9d5-b4b787eeff61
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_psych_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_rehabilitation_encounter_count
+		dataType: double
+		lineageTag: 15c257a1-6152-4398-a788-5b449791adc2
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_rehabilitation_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_inpatient_substance_use_encounter_count
+		dataType: int64
+		lineageTag: 5e614a49-2eed-49f8-a8c4-c552251d6dd2
+		summarizeBy: sum
+		sourceColumn: expected_inpatient_substance_use_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_lab_orphaned_encounter_count
+		dataType: double
+		lineageTag: b1e25e85-5f74-46ee-95eb-94226411dcff
+		summarizeBy: sum
+		sourceColumn: expected_lab_orphaned_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_other_encounter_count
+		dataType: double
+		lineageTag: 916e2ac0-884c-496d-a20a-9d55de2d9dd8
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_other_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_injections_encounter_count
+		dataType: double
+		lineageTag: fed18c98-36ea-40d4-b13f-942340e8cded
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_injections_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_pt_ot_st_encounter_count
+		dataType: double
+		lineageTag: 3d08e2fb-5362-44cb-b6c1-33dae12c8d6b
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_pt_ot_st_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_radiology_encounter_count
+		dataType: double
+		lineageTag: 3f4e0525-5a4a-4a21-b4cb-1502c0e23149
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_radiology_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_office_visit_surgery_encounter_count
+		dataType: double
+		lineageTag: aab88cd8-5cbe-4ee4-a565-e97ec4186c75
+		summarizeBy: sum
+		sourceColumn: expected_office_visit_surgery_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_orphaned_claim_encounter_count
+		dataType: double
+		lineageTag: 954665de-f1b5-4c56-bec1-0580c27bbdb2
+		summarizeBy: sum
+		sourceColumn: expected_orphaned_claim_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_hospice_encounter_count
+		dataType: double
+		lineageTag: fc9e3a30-8a79-45c6-8759-9a66c70942fb
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_hospice_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_hospital_or_clinic_encounter_count
+		dataType: double
+		lineageTag: 8de547c9-2234-49e7-82c0-e9fc826abb53
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_hospital_or_clinic_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_injections_encounter_count
+		dataType: double
+		lineageTag: c425f2ec-38e9-4b4d-bc50-b528b7ba9654
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_injections_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_psych_encounter_count
+		dataType: double
+		lineageTag: 493a18c3-52a8-4992-91b4-f9e687a254ad
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_psych_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_pt_ot_st_encounter_count
+		dataType: double
+		lineageTag: ba902eb6-875e-4abe-8312-07d2e2dba184
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_pt_ot_st_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_radiology_encounter_count
+		dataType: double
+		lineageTag: 9d1e8f33-7f74-4b75-9f46-861ad28d90a0
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_radiology_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_rehabilitation_encounter_count
+		dataType: double
+		lineageTag: 82255cfb-243a-442c-85cb-045222dac424
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_rehabilitation_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_substance_use_encounter_count
+		dataType: int64
+		lineageTag: b6764716-98e2-4693-8c2e-41c2ee735f48
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_substance_use_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_outpatient_surgery_encounter_count
+		dataType: double
+		lineageTag: 85a113bb-f178-4b4e-a0df-e03629c1a7cc
+		summarizeBy: sum
+		sourceColumn: expected_outpatient_surgery_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_telehealth_encounter_count
+		dataType: double
+		lineageTag: 8b5116a2-d41f-42a2-8e18-2125053f1800
+		summarizeBy: sum
+		sourceColumn: expected_telehealth_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expected_urgent_care_encounter_count
+		dataType: double
+		lineageTag: b23f32fa-04f6-4210-a3f3-3668ba578ff8
+		summarizeBy: sum
+		sourceColumn: expected_urgent_care_encounter_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition member_month = m
+		mode: import
+		source =
+				let
+				    // 1. Configuration - USER MUST UPDATE THESE VALUES
+				    //---------------------------------------------------
+				    // Define table names using SCHEMA.TABLE format (in UPPERCASE)
+				    main_table          = "BENCHMARKS.PREDICT_MEMBER_MONTH",
+				    patient_table       = "CORE.PATIENT",
+				
+				
+				    // 2. Define the schema for the empty table
+				    //---------------------------------------------------
+				    // This defines the table structure (column names and data types)
+				    // that will be used when load_data is false.
+				    TableSchema = type table [
+				        year_month = Text.Type,
+				        first_day_of_month = Date.Type,
+				        person_id = Text.Type,
+				        payer = Text.Type,
+				        plan = Text.Type,
+				        data_source = Text.Type,
+				        benchmark_key = Int64.Type,
+				        tuva_last_run = Text.Type,
+				        actual_paid_amount = Number.Type,
+				        actual_inpatient_paid_amount = Number.Type,
+				        actual_outpatient_paid_amount = Number.Type,
+				        actual_office_based_paid_amount = Number.Type,
+				        actual_other_paid_amount = Number.Type,
+				        expected_paid_amount = Number.Type,
+				        expected_inpatient_paid_amount = Number.Type,
+				        expected_outpatient_paid_amount = Number.Type,
+				        expected_office_based_paid_amount = Number.Type,
+				        expected_other_paid_amount = Number.Type,
+				        actual_inpatient_encounter_count = Int64.Type,
+				        actual_outpatient_encounter_count = Int64.Type,
+				        actual_office_based_encounter_count = Int64.Type,
+				        actual_other_encounter_count = Int64.Type,
+				        expected_inpatient_encounter_count = Number.Type,
+				        expected_outpatient_encounter_count = Number.Type,
+				        expected_office_based_encounter_count = Number.Type,
+				        expected_other_encounter_count = Number.Type,
+				        actual_acute_inpatient_paid_amount = Number.Type,
+				        actual_ambulance_orphaned_paid_amount = Number.Type,
+				        actual_ambulatory_surgery_center_paid_amount = Number.Type,
+				        actual_dialysis_paid_amount = Number.Type,
+				        actual_dme_orphaned_paid_amount = Number.Type,
+				        actual_emergency_department_paid_amount = Number.Type,
+				        actual_home_health_paid_amount = Number.Type,
+				        actual_inpatient_hospice_paid_amount = Number.Type,
+				        actual_inpatient_long_term_acute_care_paid_amount = Number.Type,
+				        actual_inpatient_psych_paid_amount = Number.Type,
+				        actual_inpatient_rehabilitation_paid_amount = Number.Type,
+				        actual_inpatient_skilled_nursing_paid_amount = Number.Type,
+				        actual_inpatient_substance_use_paid_amount = Number.Type,
+				        actual_lab_orphaned_paid_amount = Number.Type,
+				        actual_office_visit_paid_amount = Number.Type,
+				        actual_office_visit_other_paid_amount = Number.Type,
+				        actual_office_visit_injections_paid_amount = Number.Type,
+				        actual_office_visit_pt_ot_st_paid_amount = Number.Type,
+				        actual_office_visit_radiology_paid_amount = Number.Type,
+				        actual_office_visit_surgery_paid_amount = Number.Type,
+				        actual_orphaned_claim_paid_amount = Number.Type,
+				        actual_outpatient_hospice_paid_amount = Number.Type,
+				        actual_outpatient_hospital_or_clinic_paid_amount = Number.Type,
+				        actual_outpatient_injections_paid_amount = Number.Type,
+				        actual_outpatient_psych_paid_amount = Number.Type,
+				        actual_outpatient_pt_ot_st_paid_amount = Number.Type,
+				        actual_outpatient_radiology_paid_amount = Number.Type,
+				        actual_outpatient_rehabilitation_paid_amount = Number.Type,
+				        actual_outpatient_substance_use_paid_amount = Number.Type,
+				        actual_outpatient_surgery_paid_amount = Number.Type,
+				        actual_telehealth_paid_amount = Number.Type,
+				        actual_urgent_care_paid_amount = Number.Type,
+				        expected_acute_inpatient_paid_amount = Number.Type,
+				        expected_ambulance_orphaned_paid_amount = Number.Type,
+				        expected_ambulatory_surgery_center_paid_amount = Number.Type,
+				        expected_dialysis_paid_amount = Number.Type,
+				        expected_dme_orphaned_paid_amount = Number.Type,
+				        expected_emergency_department_paid_amount = Number.Type,
+				        expected_home_health_paid_amount = Number.Type,
+				        expected_inpatient_hospice_paid_amount = Number.Type,
+				        expected_inpatient_long_term_acute_care_paid_amount = Int64.Type,
+				        expected_inpatient_psych_paid_amount = Number.Type,
+				        expected_inpatient_rehabilitation_paid_amount = Number.Type,
+				        expected_inpatient_skilled_nursing_paid_amount = Number.Type,
+				        expected_inpatient_substance_use_paid_amount = Int64.Type,
+				        expected_lab_orphaned_paid_amount = Number.Type,
+				        expected_office_visit_paid_amount = Number.Type,
+				        expected_office_visit_other_paid_amount = Number.Type,
+				        expected_office_visit_injections_paid_amount = Number.Type,
+				        expected_office_visit_pt_ot_st_paid_amount = Number.Type,
+				        expected_office_visit_radiology_paid_amount = Number.Type,
+				        expected_office_visit_surgery_paid_amount = Number.Type,
+				        expected_orphaned_claim_paid_amount = Number.Type,
+				        expected_outpatient_hospice_paid_amount = Number.Type,
+				        expected_outpatient_hospital_or_clinic_paid_amount = Number.Type,
+				        expected_outpatient_injections_paid_amount = Number.Type,
+				        expected_outpatient_psych_paid_amount = Number.Type,
+				        expected_outpatient_pt_ot_st_paid_amount = Number.Type,
+				        expected_outpatient_radiology_paid_amount = Number.Type,
+				        expected_outpatient_rehabilitation_paid_amount = Number.Type,
+				        expected_outpatient_substance_use_paid_amount = Int64.Type,
+				        expected_outpatient_surgery_paid_amount = Number.Type,
+				        expected_telehealth_paid_amount = Number.Type,
+				        expected_urgent_care_paid_amount = Number.Type,
+				        actual_acute_inpatient_encounter_count = Int64.Type,
+				        actual_ambulance_orphaned_encounter_count = Int64.Type,
+				        actual_ambulatory_surgery_center_encounter_count = Int64.Type,
+				        actual_dialysis_encounter_count = Int64.Type,
+				        actual_dme_orphaned_encounter_count = Int64.Type,
+				        actual_emergency_department_encounter_count = Int64.Type,
+				        actual_ed_encounter_count = Int64.Type,
+				        actual_home_health_encounter_count = Int64.Type,
+				        actual_inpatient_hospice_encounter_count = Int64.Type,
+				        actual_inpatient_long_term_acute_care_encounter_count = Int64.Type,
+				        actual_inpatient_psych_encounter_count = Int64.Type,
+				        actual_inpatient_rehabilitation_encounter_count = Int64.Type,
+				        actual_inpatient_skilled_nursing_encounter_count = Int64.Type,
+				        actual_snf_encounter_count = Int64.Type,
+				        actual_inpatient_substance_use_encounter_count = Int64.Type,
+				        actual_lab_orphaned_encounter_count = Int64.Type,
+				        actual_office_visit_encounter_count = Int64.Type,
+				        actual_office_visit_other_encounter_count = Int64.Type,
+				        actual_office_visit_injections_encounter_count = Int64.Type,
+				        actual_office_visit_pt_ot_st_encounter_count = Int64.Type,
+				        actual_office_visit_radiology_encounter_count = Int64.Type,
+				        actual_office_visit_surgery_encounter_count = Int64.Type,
+				        actual_orphaned_claim_encounter_count = Int64.Type,
+				        actual_outpatient_hospice_encounter_count = Int64.Type,
+				        actual_outpatient_hospital_or_clinic_encounter_count = Int64.Type,
+				        actual_outpatient_injections_encounter_count = Int64.Type,
+				        actual_outpatient_psych_encounter_count = Int64.Type,
+				        actual_outpatient_pt_ot_st_encounter_count = Int64.Type,
+				        actual_outpatient_radiology_encounter_count = Int64.Type,
+				        actual_outpatient_rehabilitation_encounter_count = Int64.Type,
+				        actual_outpatient_substance_use_encounter_count = Int64.Type,
+				        actual_outpatient_surgery_encounter_count = Int64.Type,
+				        actual_telehealth_encounter_count = Int64.Type,
+				        actual_urgent_care_encounter_count = Int64.Type,
+				        expected_acute_inpatient_encounter_count = Number.Type,
+				        expected_ambulance_orphaned_encounter_count = Number.Type,
+				        expected_ambulatory_surgery_center_encounter_count = Number.Type,
+				        expected_dialysis_encounter_count = Number.Type,
+				        expected_dme_orphaned_encounter_count = Number.Type,
+				        expected_emergency_department_encounter_count = Number.Type,
+				        expected_ed_encounter_count = Number.Type,
+				        expected_home_health_encounter_count = Number.Type,
+				        expected_inpatient_hospice_encounter_count = Number.Type,
+				        expected_inpatient_long_term_acute_care_encounter_count = Int64.Type,
+				        expected_inpatient_psych_encounter_count = Number.Type,
+				        expected_inpatient_rehabilitation_encounter_count = Number.Type,
+				        expected_inpatient_skilled_nursing_encounter_count = Number.Type,
+				        expected_snf_encounter_count = Number.Type,
+				        expected_inpatient_substance_use_encounter_count = Int64.Type,
+				        expected_lab_orphaned_encounter_count = Number.Type,
+				        expected_office_visit_encounter_count = Number.Type,
+				        expected_office_visit_other_encounter_count = Number.Type,
+				        expected_office_visit_injections_encounter_count = Number.Type,
+				        expected_office_visit_pt_ot_st_encounter_count = Number.Type,
+				        expected_office_visit_radiology_encounter_count = Number.Type,
+				        expected_office_visit_surgery_encounter_count = Number.Type,
+				        expected_orphaned_claim_encounter_count = Number.Type,
+				        expected_outpatient_hospice_encounter_count = Number.Type,
+				        expected_outpatient_hospital_or_clinic_encounter_count = Number.Type,
+				        expected_outpatient_injections_encounter_count = Number.Type,
+				        expected_outpatient_psych_encounter_count = Number.Type,
+				        expected_outpatient_pt_ot_st_encounter_count = Number.Type,
+				        expected_outpatient_radiology_encounter_count = Number.Type,
+				        expected_outpatient_rehabilitation_encounter_count = Number.Type,
+				        expected_outpatient_substance_use_encounter_count = Int64.Type,
+				        expected_outpatient_surgery_encounter_count = Number.Type,
+				        expected_telehealth_encounter_count = Number.Type,
+				        expected_urgent_care_encounter_count = Number.Type
+				    ],
+				
+				
+				    // 3. Logic to handle optional row limit parameter
+				    //---------------------------------------------------
+				    // Safely checks if a Power Query parameter named 'row_limit' exists.
+				    safeLimit = try row_limit otherwise null,
+				
+				
+				    // 4. Build the dynamic SQL query for Snowflake
+				    //---------------------------------------------------
+				    SQLQuery =
+				        if safeLimit <> null and safeLimit > 0 then
+				            let
+				                // Convert the numeric limit to text to safely embed in the SQL string
+				                limitText = Number.ToText(safeLimit)
+				            in
+				            "
+				            WITH random_sample AS (
+				                -- Select a deterministic, random sample of PERSON_ID.
+				                -- HASH() is the Snowflake equivalent for creating a deterministic order.
+				                SELECT PERSON_ID
+				                FROM " & patient_table & "
+				                ORDER BY HASH(PERSON_ID)
+				                LIMIT " & limitText & "
+				            )
+				            -- Join the main table against the random sample of persons
+				            SELECT m.*
+				            FROM " & main_table & " AS m
+				            INNER JOIN random_sample AS c
+				                ON m.PERSON_ID = c.PERSON_ID
+				            "
+				        else
+				            // Base query that runs if 'row_limit' is not set
+				            "SELECT * FROM " & main_table,
+				
+				
+				    // 5. Conditionally load data or create an empty table
+				    //---------------------------------------------------
+				    // If 'load_data' is false, the 'DataFromSnowflake' step and its dependencies
+				    // will never be executed due to Power Query's lazy evaluation.
+				    FinalTable = if load_data then
+				                    let
+				                        // Connect to Snowflake and execute the native query
+				                        DataFromSnowflake = Value.NativeQuery(
+				                            Snowflake.Databases(
+				                                snowflake_account,
+				                                snowflake_warehouse,
+				                                [Role=snowflake_role, Implementation="2.0"]
+				                            ){[Name=snowflake_database]}[Data], // This sets the Database context
+				                            SQLQuery,
+				                            null,
+				                            [EnableFolding=true]
+				                        ),
+				
+				                        // Transform all column names to lowercase
+				                        LowercaseColumns = Table.TransformColumnNames(DataFromSnowflake, Text.Lower)
+				                    in
+				                        LowercaseColumns
+				                 else
+				                    // If load_data is false, return an empty table with the predefined schema.
+				                    // The #table function automatically applies the types from TableSchema.
+				                    #table(TableSchema, {})
+				
+				in
+				    FinalTable
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

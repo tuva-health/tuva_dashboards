@@ -1,0 +1,122 @@
+table conditions
+	lineageTag: cc6f1889-b6f2-4764-aa42-4b0795dc2a8c
+
+	column person_id
+		dataType: string
+		lineageTag: a09b13e8-5974-4d2b-8a74-d4ee9ce12b68
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column condition
+		dataType: string
+		lineageTag: 1ea25534-6b7c-4992-bba8-05f556533338
+		summarizeBy: none
+		sourceColumn: condition
+
+		annotation SummarizationSetBy = Automatic
+
+	partition conditions = m
+		mode: import
+		source =
+				let
+				    // 1. Configuration - USER MUST UPDATE THESE VALUES
+				    //---------------------------------------------------
+				    // Define table names using SCHEMA.TABLE format (in UPPERCASE)
+				    chronic_conditions_table = "CHRONIC_CONDITIONS.TUVA_CHRONIC_CONDITIONS_LONG",
+				    patient_table            = "CORE.PATIENT",
+				
+				
+				    // 2. Define the schema for the empty table
+				    //---------------------------------------------------
+				    // This schema must match the columns returned by your SQL query.
+				    // The query returns PERSON_ID and CONDITION.
+				    TableSchema = type table [
+				        person_id = Text.Type,
+				        condition = Text.Type
+				    ],
+				
+				
+				    // 3. Logic to handle optional row limit parameter
+				    //---------------------------------------------------
+				    safeLimit = try row_limit otherwise null,
+				
+				
+				    // 4. Define the base SQL logic for the UNION
+				    //---------------------------------------------------
+				    // This SQL combines patients with conditions and those without.
+				    baseSQL = "
+				        SELECT PERSON_ID, CONDITION
+				        FROM " & chronic_conditions_table & "
+				
+				        UNION ALL
+				
+				        SELECT PERSON_ID, 'no chronic conditions' AS CONDITION
+				        FROM " & patient_table & "
+				        WHERE PERSON_ID NOT IN (SELECT PERSON_ID FROM " & chronic_conditions_table & ")
+				    ",
+				
+				
+				    // 5. Build the final dynamic SQL query for Snowflake
+				    //---------------------------------------------------
+				    SQLQuery =
+				        if safeLimit <> null and safeLimit > 0 then
+				            let
+				                limitText = Number.ToText(safeLimit)
+				            in
+				            "
+				            -- This query runs when 'row_limit' is set
+				            WITH random_patient_sample AS (
+				                -- First, get a deterministic, random sample of patients
+				                SELECT PERSON_ID
+				                FROM " & patient_table & "
+				                ORDER BY HASH(PERSON_ID)
+				                LIMIT " & limitText & "
+				            ),
+				            all_conditions_data AS (
+				                -- Second, run the full base query with the UNION
+				                " & baseSQL & "
+				            )
+				            -- Finally, join the full dataset against the patient sample to apply the limit
+				            SELECT d.*
+				            FROM all_conditions_data d
+				            INNER JOIN random_patient_sample s
+				                ON d.PERSON_ID = s.PERSON_ID
+				            "
+				        else
+				            // If 'row_limit' is not set, run the base query for all patients
+				            baseSQL,
+				
+				
+				    // 6. Conditionally load data or create an empty table
+				    //---------------------------------------------------
+				    // If 'load_data' is false, the database is not queried.
+				    FinalTable = if load_data then
+				                    let
+				                        // Connect to Snowflake and execute the native query
+				                        Source = Value.NativeQuery(
+				                            Snowflake.Databases(
+				                                snowflake_account,
+				                                snowflake_warehouse,
+				                                [Role=snowflake_role, Implementation="2.0"]
+				                            ){[Name=snowflake_database]}[Data],
+				                            SQLQuery,
+				                            null,
+				                            [EnableFolding=true]
+				                        ),
+				
+				                        // Transform all column names to lowercase
+				                        LowercaseColumns = Table.TransformColumnNames(Source, Text.Lower)
+				                    in
+				                        LowercaseColumns
+				                 else
+				                    // If load_data is false, return an empty table with the predefined schema.
+				                    #table(TableSchema, {})
+				in
+				    FinalTable
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

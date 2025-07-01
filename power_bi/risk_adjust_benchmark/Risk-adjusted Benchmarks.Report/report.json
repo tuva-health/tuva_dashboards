@@ -1,0 +1,320 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "TuvaHealth-Logo19897795172364385.png",
+            "path": "TuvaHealth-Logo19897795172364385.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"relationships\":[{\"source\":\"15d75e6ebdee58c746b3\",\"target\":\"515d4db6eeffa81d23be\",\"type\":1},{\"source\":\"15d75e6ebdee58c746b3\",\"target\":\"12cfc69885581bfb291e\",\"type\":1},{\"source\":\"e655c5f707fc1e9df8bf\",\"target\":\"515d4db6eeffa81d23be\",\"type\":1},{\"source\":\"e655c5f707fc1e9df8bf\",\"target\":\"12cfc69885581bfb291e\",\"type\":1}]}",
+      "displayName": "PMPM and Encounters",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "6eefe7c33894020b7f28",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"12cfc69885581bfb291e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":597.3333333333334,\"y\":589.0370370370371,\"z\":12000,\"width\":654.2222222222222,\"height\":405.3333333333333,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"unpivot_member_month.metric\",\"active\":true}],\"Series\":[{\"queryRef\":\"unpivot_member_month.metric_type\"}],\"Y\":[{\"queryRef\":\"measure_table.unpivot\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_member_month\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"metric\"},\"Name\":\"unpivot_member_month.metric\",\"NativeReferenceName\":\"metric\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"metric_type\"},\"Name\":\"unpivot_member_month.metric_type\",\"NativeReferenceName\":\"metric_type\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"unpivot\"},\"Name\":\"measure_table.unpivot\",\"NativeReferenceName\":\"unpivot\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"unpivot\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Encounters PKPY'\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"layout\":[{\"properties\":{\"clusteredGapSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"clusteredGapOverlaps\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"25L\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"spacing\":[{\"properties\":{\"verticalSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Encounter Utilization (PKPY)'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"baa6f2a1e816fabfade1\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"unpivot_member_month\"}},\"Property\":\"metric\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_member_month\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"metric\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'acute inpatient encounters'\"}}],[{\"Literal\":{\"Value\":\"'ed encounters'\"}}],[{\"Literal\":{\"Value\":\"'home health encounters'\"}}],[{\"Literal\":{\"Value\":\"'inpatient skilled nursing encounters'\"}}],[{\"Literal\":{\"Value\":\"'office visit encounters'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 405.33,
+          "width": 654.22,
+          "x": 597.33,
+          "y": 589.04,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"15d75e6ebdee58c746b3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.82191780821918,\"y\":589.5890410958905,\"z\":8000,\"width\":554.5205479452055,\"height\":405.47945205479454,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"conditions.condition\",\"active\":true}],\"Values\":[{\"queryRef\":\"measure_table.actual_pmpm\"},{\"queryRef\":\"measure_table.expected_pmpm\"},{\"queryRef\":\"measure_table.Difference\"},{\"queryRef\":\"measure_table.member_months\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"conditions\",\"Type\":0},{\"Name\":\"m1\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"Difference\"},\"Name\":\"measure_table.Difference\",\"NativeReferenceName\":\"Difference1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"actual_pmpm\"},\"Name\":\"measure_table.actual_pmpm\",\"NativeReferenceName\":\"Actual\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"expected_pmpm\"},\"Name\":\"measure_table.expected_pmpm\",\"NativeReferenceName\":\"Expected\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"condition\"},\"Name\":\"conditions.condition\",\"NativeReferenceName\":\"condition\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"member_months\"},\"Name\":\"measure_table.member_months\",\"NativeReferenceName\":\"Member Months\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"member_months\"}}}]},\"columnProperties\":{\"measure_table.actual_pmpm\":{\"displayName\":\"Actual\"},\"measure_table.expected_pmpm\":{\"displayName\":\"Expected\"},\"measure_table.member_months\":{\"displayName\":\"Member Months\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"Difference\"}},\"Right\":{\"Literal\":{\"Value\":\"-99999999999D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"Difference\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#AEFFB5'\"}}},{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"Difference\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"Difference\"}},\"Right\":{\"Literal\":{\"Value\":\"9999999D\"}}}}}},\"Value\":{\"Literal\":{\"Value\":\"'#efb5b9'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"measure_table.Difference\"}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"88.17808730272694D\"}}}},\"selector\":{\"metadata\":\"measure_table.expected_pmpm\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"211D\"}}}},\"selector\":{\"metadata\":\"conditions.condition\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PMPM by Chronic Conditions'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"member_months\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m1\",\"Entity\":\"measure_table\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"member_months\"}},\"Right\":{\"Literal\":{\"Value\":\"240L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 405.48,
+          "width": 554.52,
+          "x": 20.82,
+          "y": 589.59,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"17f84660e1a514bf4935\",\"layouts\":[{\"id\":0,\"position\":{\"x\":269.1078355314197,\"y\":13.902249806051202,\"z\":5000,\"width\":522.3273855702095,\"height\":33.76260667183863,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Expected Values - PMPM'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#1A7AA9'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.76,
+          "width": 522.33,
+          "x": 269.11,
+          "y": 13.90,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"210f701c55a16202df12\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1057.5640031031808,\"y\":6.951124903025601,\"z\":7000,\"width\":205.55469356089992,\"height\":46.67183863460046,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"unpivot_member_month.data_source\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u1\",\"Entity\":\"unpivot_member_month\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u1\"}},\"Property\":\"data_source\"},\"Name\":\"unpivot_member_month.data_source\",\"NativeReferenceName\":\"data_source\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_member_month\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"data_source\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'medicare_lds'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 46.67,
+          "width": 205.55,
+          "x": 1057.56,
+          "y": 6.95,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"50d7f8f6d7b319183407\",\"layouts\":[{\"id\":0,\"position\":{\"x\":970.9589041095891,\"y\":70.13698630136986,\"z\":11000,\"width\":280.54794520547944,\"height\":150.13698630136986,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"member_month.first_day_of_month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"member_month\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"first_day_of_month\"},\"Name\":\"member_month.first_day_of_month\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"first_day_of_month\"}}}]},\"columnProperties\":{\"member_month.first_day_of_month\":{\"displayName\":\"Date\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2023-12-01T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"member_month\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"first_day_of_month\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2023-12-02T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 150.14,
+          "width": 280.55,
+          "x": 970.96,
+          "y": 70.14,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"515d4db6eeffa81d23be\",\"layouts\":[{\"id\":0,\"position\":{\"x\":597.2602739726027,\"y\":233.4246575342466,\"z\":1000,\"width\":654.2465753424658,\"height\":336.43835616438355,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"unpivot_member_month.metric\",\"active\":true}],\"Y\":[{\"queryRef\":\"measure_table.unpivot\"}],\"Series\":[{\"queryRef\":\"unpivot_member_month.metric_type\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0},{\"Name\":\"u1\",\"Entity\":\"unpivot_member_month\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"unpivot\"},\"Name\":\"measure_table.unpivot\",\"NativeReferenceName\":\"PMPM\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u1\"}},\"Property\":\"metric\"},\"Name\":\"unpivot_member_month.metric\",\"NativeReferenceName\":\"metric\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u1\"}},\"Property\":\"metric_type\"},\"Name\":\"unpivot_member_month.metric_type\",\"NativeReferenceName\":\"Actual vs Expected\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"unpivot\"}}}]},\"columnProperties\":{\"measure_table.unpivot\":{\"displayName\":\"PMPM\"},\"unpivot_member_month.metric_type\":{\"displayName\":\"Actual vs Expected\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"layout\":[{\"properties\":{\"clusteredGapSize\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"clusteredGapOverlaps\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"25L\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"spacing\":[{\"properties\":{\"verticalSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PMPM by Encounter Group'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"290e22b00840347b4760\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"unpivot_member_month\"}},\"Property\":\"metric\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_member_month\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"metric\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'inpatient paid amount'\"}}],[{\"Literal\":{\"Value\":\"'office based paid amount'\"}}],[{\"Literal\":{\"Value\":\"'other paid amount'\"}}],[{\"Literal\":{\"Value\":\"'outpatient paid amount'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 336.44,
+          "width": 654.25,
+          "x": 597.26,
+          "y": 233.42,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6e0ae2db8bce320a37a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.5,\"y\":0,\"z\":3000,\"width\":226.66666666666669,\"height\":60.833333333333336,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"TuvaHealth-Logo19897795172364385.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 60.83,
+          "width": 226.67,
+          "x": 12.50,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"8b9e541f8f478586d6f6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2000,\"width\":1280,\"height\":60.833333333333336,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 60.83,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ba3a0b14f6397f936869\",\"layouts\":[{\"id\":0,\"position\":{\"x\":530.791229742612,\"y\":91.51572926596758,\"z\":10000,\"width\":250.14299332697806,\"height\":107.37845567206863,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.Total Difference\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Difference\"},\"Name\":\"measure_table.Total Difference\",\"NativeReferenceName\":\"Total Difference to Benchmark\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Difference\"}}}]},\"columnProperties\":{\"measure_table.Total Difference\":{\"displayName\":\"Total Difference to Benchmark\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"38D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 107.38,
+          "width": 250.14,
+          "x": 530.79,
+          "y": 91.52,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"bb127a91badfa05fea89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":240,\"y\":0,\"z\":4000,\"width\":29,\"height\":61,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCB09'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCB09'\"}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 61.00,
+          "width": 29.00,
+          "x": 240.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"dbf93ea58b0ac5e5d080\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.285033365109626,\"y\":91.51572926596758,\"z\":9000,\"width\":211.09628217349857,\"height\":107.37845567206863,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.actual_pmpm\"},{\"queryRef\":\"measure_table.expected_pmpm\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"actual_pmpm\"},\"Name\":\"measure_table.actual_pmpm\",\"NativeReferenceName\":\"Actual PMPM\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"expected_pmpm\"},\"Name\":\"measure_table.expected_pmpm\",\"NativeReferenceName\":\"Expected PMPM\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"actual_pmpm\"}}}]},\"columnProperties\":{\"measure_table.actual_pmpm\":{\"displayName\":\"Actual PMPM\"},\"measure_table.expected_pmpm\":{\"displayName\":\"Expected PMPM\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 107.38,
+          "width": 211.10,
+          "x": 29.29,
+          "y": 91.52,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"e58f278096f8fe24bb65\",\"layouts\":[{\"id\":0,\"position\":{\"x\":924.499612102405,\"y\":14.895267649340573,\"z\":6000,\"width\":117.17610550814584,\"height\":32.76958882854926,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Data Source:'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#1A7AA9'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 32.77,
+          "width": 117.18,
+          "x": 924.50,
+          "y": 14.90,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"e655c5f707fc1e9df8bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.743565300285987,\"y\":233.0600571973308,\"z\":0,\"width\":555.1954242135366,\"height\":336.7778836987607,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"measure_table.actual_pmpm\"},{\"queryRef\":\"measure_table.expected_pmpm\"}],\"Category\":[{\"queryRef\":\"member_month.first_day_of_month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m1\",\"Entity\":\"measure_table\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"member_month\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"actual_pmpm\"},\"Name\":\"measure_table.actual_pmpm\",\"NativeReferenceName\":\"Actual\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m1\"}},\"Property\":\"expected_pmpm\"},\"Name\":\"measure_table.expected_pmpm\",\"NativeReferenceName\":\"Expected\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"first_day_of_month\"},\"Name\":\"member_month.first_day_of_month\",\"NativeReferenceName\":\"first_day_of_month\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"first_day_of_month\"}}}]},\"columnProperties\":{\"measure_table.actual_pmpm\":{\"displayName\":\"Actual\"},\"measure_table.expected_pmpm\":{\"displayName\":\"Expected\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'PMPM'\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'monotoneX'\"}}}},\"selector\":{\"metadata\":\"measure_table.expected_pmpm\"}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PMPM Actual vs Expected'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 336.78,
+          "width": 555.20,
+          "x": 20.74,
+          "y": 233.06,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fe4e6c88d9779d6f274d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":278.20781696854147,\"y\":91.51572926596758,\"z\":13000,\"width\":211.09628217349857,\"height\":107.37845567206863,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.Total Actual\"},{\"queryRef\":\"measure_table.Total Expected\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Actual\"},\"Name\":\"measure_table.Total Actual\",\"NativeReferenceName\":\"Total Actual\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Expected\"},\"Name\":\"measure_table.Total Expected\",\"NativeReferenceName\":\"Total Expected\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Actual\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 107.38,
+          "width": 211.10,
+          "x": 278.21,
+          "y": 91.52,
+          "z": 13000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"relationships\":[{\"source\":\"5b558689dc7f8c4ecc8d\",\"target\":\"641d6fb0a3b323090397\",\"type\":1}]}",
+      "displayName": "Inpatient ",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"5b80cdb78516f04e41f4\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"inpatient\"}},\"Property\":\"ms_drg_code\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+      "height": 1080.00,
+      "name": "cad679e2cf19edd3e2b6",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0753e6f60312a8c63f0c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":706.5014299332695,\"y\":92.73593898951383,\"z\":11000,\"width\":247.7025738798856,\"height\":114.69971401334604,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.Discharge Home Percent\"},{\"queryRef\":\"measure_table.Expected Discharge Home Percent\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Discharge Home Percent\"},\"Name\":\"measure_table.Discharge Home Percent\",\"NativeReferenceName\":\"Actual Discharge Home %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected Discharge Home Percent\"},\"Name\":\"measure_table.Expected Discharge Home Percent\",\"NativeReferenceName\":\"Expected Discharge Home %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Discharge Home Percent\"}}}]},\"columnProperties\":{\"measure_table.Discharge Home Percent\":{\"displayName\":\"Actual Discharge Home %\"},\"measure_table.Expected Discharge Home Percent\":{\"displayName\":\"Expected Discharge Home %\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 114.70,
+          "width": 247.70,
+          "x": 706.50,
+          "y": 92.74,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"095460bcf1eb1b16da23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":60.833333333333336,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 60.83,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"3494f3749a4c64b1257e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":12.5,\"y\":0,\"z\":1000,\"width\":226.66666666666669,\"height\":60.833333333333336,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"TuvaHealth-Logo19897795172364385.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 60.83,
+          "width": 226.67,
+          "x": 12.50,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"3dceb4dbbc3b3c9dabad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":24.40419447092469,\"y\":87.85510009532888,\"z\":14000,\"width\":185.47187797902762,\"height\":114.69971401334604,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.encounter_count\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"encounter_count\"},\"Name\":\"measure_table.encounter_count\",\"NativeReferenceName\":\"Inpatient Encounters\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"encounter_count\"}}}]},\"columnProperties\":{\"measure_table.encounter_count\":{\"displayName\":\"Inpatient Encounters\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"38D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 114.70,
+          "width": 185.47,
+          "x": 24.40,
+          "y": 87.86,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"5b558689dc7f8c4ecc8d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":541,\"z\":7000,\"width\":712,\"height\":414,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"inpatient.facility_name\",\"active\":true},{\"queryRef\":\"inpatient.ms_drg_code\",\"active\":true}],\"Values\":[{\"queryRef\":\"measure_table.encounter_count\"},{\"queryRef\":\"measure_table.Inpatient Paid Amount\"},{\"queryRef\":\"measure_table.Actual LOS\"},{\"queryRef\":\"measure_table.Expected LOS\"},{\"queryRef\":\"measure_table.Actual Readmission\"},{\"queryRef\":\"measure_table.Expected Readmission\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"encounter_count\"},\"Name\":\"measure_table.encounter_count\",\"NativeReferenceName\":\"Inpatient Encounters\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual LOS\"},\"Name\":\"measure_table.Actual LOS\",\"NativeReferenceName\":\"Actual LOS\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected LOS\"},\"Name\":\"measure_table.Expected LOS\",\"NativeReferenceName\":\"Expected LOS\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Readmission\"},\"Name\":\"measure_table.Actual Readmission\",\"NativeReferenceName\":\"Actual Readmit %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected Readmission\"},\"Name\":\"measure_table.Expected Readmission\",\"NativeReferenceName\":\"Expected Readmit %\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"facility_name\"},\"Name\":\"inpatient.facility_name\",\"NativeReferenceName\":\"facility_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"ms_drg_code\"},\"Name\":\"inpatient.ms_drg_code\",\"NativeReferenceName\":\"ms_drg_code\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Inpatient Paid Amount\"},\"Name\":\"measure_table.Inpatient Paid Amount\",\"NativeReferenceName\":\"Inpatient Paid Amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"encounter_count\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"inpatient.facility_name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"inpatient\"}},\"Property\":\"facility_name\"}}],\"isPinned\":true},{\"queryRefs\":[\"inpatient.ms_drg_code\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"inpatient\"}},\"Property\":\"ms_drg_code\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Providence Health & Services - Wa'\"}}],\"isToggled\":true}]}}],\"columnProperties\":{\"measure_table.encounter_count\":{\"displayName\":\"Inpatient Encounters\"},\"measure_table.Actual Readmission\":{\"displayName\":\"Actual Readmit %\"},\"measure_table.Expected Readmission\":{\"displayName\":\"Expected Readmit %\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"76.68152087507694D\"}}}},\"selector\":{\"metadata\":\"measure_table.encounter_count\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"74.87048661376465D\"}}}},\"selector\":{\"metadata\":\"measure_table.Expected Readmission\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"73.7140724890477D\"}}}},\"selector\":{\"metadata\":\"measure_table.Actual Readmission\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"72.69685864067165D\"}}}},\"selector\":{\"metadata\":\"measure_table.Expected LOS\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"50.81600825271421D\"}}}},\"selector\":{\"metadata\":\"measure_table.Actual LOS\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"227D\"}}}},\"selector\":{\"metadata\":\"inpatient.facility_name\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"112D\"}}}},\"selector\":{\"metadata\":\"measure_table.Inpatient Paid Amount\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"230D\"}}}},\"selector\":{\"metadata\":\"inpatient.ms_drg_code\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Inpatient Metrics by Facility (> 10 Encounters)'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measure_table\"}},\"Property\":\"encounter_count\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"encounter_count\"}},\"Right\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 414.00,
+          "width": 712.00,
+          "x": 20.00,
+          "y": 541.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"641d6fb0a3b323090397\",\"layouts\":[{\"id\":0,\"position\":{\"x\":744,\"y\":541,\"z\":10000,\"width\":527,\"height\":414,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"unpivot_inpatient.discharge_location\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(unpivot_inpatient.discharge_location_long)\"}],\"Series\":[{\"queryRef\":\"unpivot_inpatient.eva\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_inpatient\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"discharge_location\"},\"Name\":\"unpivot_inpatient.discharge_location\",\"NativeReferenceName\":\"discharge_location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"discharge_location_long\"}},\"Function\":0},\"Name\":\"Sum(unpivot_inpatient.discharge_location_long)\",\"NativeReferenceName\":\"Sum of discharge_location_long\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"eva\"},\"Name\":\"unpivot_inpatient.eva\",\"NativeReferenceName\":\"eva\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"discharge_location_long\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Inpatient Encounters'\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Discharge Location'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"unpivot_inpatient\"}},\"Property\":\"discharge_location_long\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"unpivot_inpatient\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"discharge_location_long\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 414.00,
+          "width": 527.00,
+          "x": 744.00,
+          "y": 541.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"785a1b5fed572cc59225\",\"layouts\":[{\"id\":0,\"position\":{\"x\":239.16110581506194,\"y\":92.73593898951381,\"z\":8000,\"width\":212.31649189704478,\"height\":114.69971401334604,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.Actual Readmission\"},{\"queryRef\":\"measure_table.Expected Readmission\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Readmission\"},\"Name\":\"measure_table.Actual Readmission\",\"NativeReferenceName\":\"Actual Readmission %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected Readmission\"},\"Name\":\"measure_table.Expected Readmission\",\"NativeReferenceName\":\"Expected Readmission %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Readmission\"}}}]},\"columnProperties\":{\"measure_table.Actual Readmission\":{\"displayName\":\"Actual Readmission %\"},\"measure_table.Expected Readmission\":{\"displayName\":\"Expected Readmission %\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 114.70,
+          "width": 212.32,
+          "x": 239.16,
+          "y": 92.74,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"9c8a4aa4dc8e6ba76d0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1057.5640031031808,\"y\":6.951124903025601,\"z\":5000,\"width\":205.55469356089992,\"height\":46.67183863460046,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"inpatient.data_source\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"data_source\"},\"Name\":\"inpatient.data_source\",\"NativeReferenceName\":\"data_source\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"data_source\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'medicare_lds'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 46.67,
+          "width": 205.55,
+          "x": 1057.56,
+          "y": 6.95,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a560e02e23f34ce9dcf2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":477.10200190657764,\"y\":92.73593898951381,\"z\":9000,\"width\":208.6558627264061,\"height\":114.69971401334604,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"measure_table.Expected LOS\"},{\"queryRef\":\"measure_table.Actual LOS\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected LOS\"},\"Name\":\"measure_table.Expected LOS\",\"NativeReferenceName\":\"Expected LOS\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual LOS\"},\"Name\":\"measure_table.Actual LOS\",\"NativeReferenceName\":\"Actual LOS\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected LOS\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 114.70,
+          "width": 208.66,
+          "x": 477.10,
+          "y": 92.74,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"c4b59d476a5f3d7c1e80\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.149253731343283,\"y\":228.3582089552239,\"z\":12000,\"width\":616.5671641791045,\"height\":280.74626865671644,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(inpatient.actual_los)\"},{\"queryRef\":\"Sum(inpatient.expected_los)\"}],\"Category\":[{\"queryRef\":\"inpatient.first_day_of_month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"actual_los\"}},\"Function\":1},\"Name\":\"Sum(inpatient.actual_los)\",\"NativeReferenceName\":\"Actual LOS\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"expected_los\"}},\"Function\":1},\"Name\":\"Sum(inpatient.expected_los)\",\"NativeReferenceName\":\"Expected LOS\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"},\"Name\":\"inpatient.first_day_of_month\",\"NativeReferenceName\":\"first_day_of_month\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"}}}]},\"columnProperties\":{\"Sum(inpatient.actual_los)\":{\"displayName\":\"Actual LOS\"},\"Sum(inpatient.expected_los)\":{\"displayName\":\"Expected LOS\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Inpatient Encounters'\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"y2Axis\":[{\"properties\":{\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Length of Stay'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.75,
+          "width": 616.57,
+          "x": 20.15,
+          "y": 228.36,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"ca697dd14892c6bf1890\",\"layouts\":[{\"id\":0,\"position\":{\"x\":269.1078355314197,\"y\":13.902249806051202,\"z\":3000,\"width\":522.3273855702095,\"height\":33.76260667183863,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Expected Values - Inpatient'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#1A7AA9'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 33.76,
+          "width": 522.33,
+          "x": 269.11,
+          "y": 13.90,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d6a1db875855018f4b8d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":240,\"y\":0,\"z\":2000,\"width\":29,\"height\":61,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCB09'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFCB09'\"}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 61.00,
+          "width": 29.00,
+          "x": 240.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d7e0d805749dede3b6af\",\"layouts\":[{\"id\":0,\"position\":{\"x\":970.9589041095891,\"y\":70.13698630136986,\"z\":6000,\"width\":280.54794520547944,\"height\":150.13698630136986,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"inpatient.first_day_of_month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"},\"Name\":\"inpatient.first_day_of_month\",\"NativeReferenceName\":\"first_day_of_month\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 150.14,
+          "width": 280.55,
+          "x": 970.96,
+          "y": 70.14,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f5bc29a8c634315851f1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":924.499612102405,\"y\":14.895267649340573,\"z\":4000,\"width\":117.17610550814584,\"height\":32.76958882854926,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Data Source:'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#1A7AA9'\"}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 32.77,
+          "width": 117.18,
+          "x": 924.50,
+          "y": 14.90,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"fd1df0963bc0bfe62b3f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":655.2526215443279,\"y\":228.17921830314583,\"z\":13000,\"width\":616.2059103908484,\"height\":280.6482364156339,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"measure_table.Actual Readmission\"},{\"queryRef\":\"measure_table.Expected Readmission\"}],\"Category\":[{\"queryRef\":\"inpatient.first_day_of_month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measure_table\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"inpatient\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Actual Readmission\"},\"Name\":\"measure_table.Actual Readmission\",\"NativeReferenceName\":\"Actual Readmission\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Expected Readmission\"},\"Name\":\"measure_table.Expected Readmission\",\"NativeReferenceName\":\"Expected Readmission\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"},\"Name\":\"inpatient.first_day_of_month\",\"NativeReferenceName\":\"first_day_of_month\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"first_day_of_month\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Inpatient Encounters'\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dotted'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}}},\"selector\":{\"metadata\":\"measure_table.Expected Readmission\"}}],\"y2Axis\":[{\"properties\":{\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"measure_table.Expected Readmission\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Readmission Rate'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.65,
+          "width": 616.21,
+          "x": 655.25,
+          "y": 228.18,
+          "z": 13000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+expression row_limit = 100000 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=false]
+	lineageTag: d1102af4-f1da-4eec-8804-5cf358c5829c
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Number
+
+expression snowflake_account = "xxx" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 87eb3b3b-505e-4eb4-b2b6-914415710b36
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression snowflake_warehouse = "COMPUTE_WH" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 6c147349-ac82-48ab-a330-45c72592a1d5
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression snowflake_database = "MEDICARE_LDS_FIVE_MULTI_YEAR" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 63414f5d-014a-4e6d-a4b4-df185c9ce7eb
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression snowflake_role = "ACCOUNTADMIN" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: f5ba9523-196c-4cad-aea9-482f5f0ae84d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression load_data = false meta [IsParameterQuery=true, List={true, false}, DefaultValue=true, Type="Logical", IsParameterQueryRequired=true]
+	lineageTag: 51b244ee-c9f0-45ba-8edc-2ef459bff520
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Logical
+

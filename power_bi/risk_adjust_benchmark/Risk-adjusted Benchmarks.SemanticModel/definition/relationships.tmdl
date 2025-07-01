@@ -1,0 +1,31 @@
+relationship e0e6abf1-8fb8-4c9c-a1b3-b521f1e25aa8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: inpatient.encounter_start_date
+	toColumn: LocalDateTable_e1d539b4-0cb0-43fe-829e-aba2d7454016.Date
+
+relationship 111b4e04-71b4-44a8-9826-90948ce09472
+	joinOnDateBehavior: datePartOnly
+	fromColumn: inpatient.first_day_of_month
+	toColumn: LocalDateTable_77f5054b-454e-4b50-92d4-0fb7fc6e2013.Date
+
+relationship AutoDetected_97d4762a-22e8-4b48-855f-dcda5de00c0d
+	fromColumn: unpivot_inpatient.encounter_id
+	toColumn: inpatient.encounter_id
+
+relationship 7dad3bb0-3391-4d67-86fd-856f537ed2dc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: member_month.first_day_of_month
+	toColumn: LocalDateTable_e2eb678b-e0c2-40e3-b3a2-9e65fcaaa515.Date
+
+relationship 832cfe51-ff6d-955d-8893-a50a7c5d348e
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: conditions.person_id
+	toColumn: member_month.person_id
+
+relationship 6b737fe4-a46d-ec57-b614-8e86e09d58c4
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: unpivot_member_month.person_id
+	toColumn: member_month.person_id
+

@@ -1,0 +1,29 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["inpatient","unpivot_inpatient","member_month","row_limit","unpivot_member_month","conditions","snowflake_account","snowflake_warehouse","snowflake_database","snowflake_role","load_data"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table inpatient
+ref table DateTableTemplate_95a7cf4c-1219-4339-9c62-2663ae24720f
+ref table LocalDateTable_e1d539b4-0cb0-43fe-829e-aba2d7454016
+ref table LocalDateTable_77f5054b-454e-4b50-92d4-0fb7fc6e2013
+ref table unpivot_inpatient
+ref table measure_table
+ref table member_month
+ref table LocalDateTable_e2eb678b-e0c2-40e3-b3a2-9e65fcaaa515
+ref table unpivot_member_month
+ref table conditions
+
+ref cultureInfo en-US
+
