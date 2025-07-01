@@ -1,0 +1,164 @@
+table unpivot_member_month
+	lineageTag: 2a124ec7-1fad-4bfd-8d9c-4101ca1d0b5b
+
+	column year_month
+		dataType: string
+		lineageTag: 1e381283-d433-40bb-9987-8a17b2e257e4
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_id
+		dataType: string
+		lineageTag: 226d793d-7801-45fa-a505-105d2a86ee5d
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer
+		dataType: string
+		lineageTag: c32dc48f-4946-4e15-8e84-904e034be49c
+		summarizeBy: none
+		sourceColumn: payer
+
+		annotation SummarizationSetBy = Automatic
+
+	column plan
+		dataType: string
+		lineageTag: 1958a246-8bb2-4b7c-b498-67b35ec41f86
+		summarizeBy: none
+		sourceColumn: plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source
+		dataType: string
+		lineageTag: 0fe52b46-6adb-4b37-b740-3b6bb0cb1fdf
+		summarizeBy: none
+		sourceColumn: data_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column metric
+		dataType: string
+		lineageTag: 5b55f9cd-a617-47b9-a106-3dcc482a9fa8
+		summarizeBy: none
+		sourceColumn: metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: double
+		lineageTag: 3baa1aaa-571c-4732-a090-b699fe398a25
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column metric_type
+		dataType: string
+		lineageTag: 7d003454-5a41-4d54-9a72-0bcc9cdfe9f2
+		summarizeBy: none
+		sourceColumn: metric_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition unpivot_member_month = m
+		mode: import
+		source =
+				let
+				    // 1. Configuration - USER MUST UPDATE THESE VALUES
+				    //---------------------------------------------------
+				    // Define table names using SCHEMA.TABLE format (in UPPERCASE)
+				    main_table          = "BENCHMARKS.benchmarks_unpivot_member_month",
+				    patient_table       = "CORE.PATIENT",
+				
+				
+				    // 2. Define the schema for the empty table
+				    //---------------------------------------------------
+				    // This defines the table structure (column names and data types)
+				    // that will be used when load_data is false.
+				    TableSchema = type table [
+				        year_month = Text.Type,
+				        person_id = Text.Type,
+				        payer = Text.Type,
+				        plan = Text.Type,
+				        data_source = Text.Type,
+				        metric = Text.Type,
+				        value = Number.Type,
+				        metric_type = Text.Type
+				    ],
+				
+				
+				    // 3. Logic to handle optional row limit parameter
+				    //---------------------------------------------------
+				    // Safely checks if a Power Query parameter named 'row_limit' exists.
+				    safeLimit = try row_limit otherwise null,
+				
+				
+				    // 4. Build the dynamic SQL query for Snowflake
+				    //---------------------------------------------------
+				    SQLQuery =
+				        if safeLimit <> null and safeLimit > 0 then
+				            let
+				                // Convert the numeric limit to text to safely embed in the SQL string
+				                limitText = Number.ToText(safeLimit)
+				            in
+				            "
+				            WITH random_sample AS (
+				                -- Select a deterministic, random sample of PERSON_ID.
+				                -- HASH() is the Snowflake equivalent for creating a deterministic order.
+				                SELECT PERSON_ID
+				                FROM " & patient_table & "
+				                ORDER BY HASH(PERSON_ID)
+				                LIMIT " & limitText & "
+				            )
+				            -- Join the main table against the random sample of persons
+				            SELECT m.*
+				            FROM " & main_table & " AS m
+				            INNER JOIN random_sample AS c
+				                ON m.PERSON_ID = c.PERSON_ID
+				            "
+				        else
+				            // Base query that runs if 'row_limit' is not set
+				            "SELECT * FROM " & main_table,
+				
+				
+				    // 5. Conditionally load data or create an empty table
+				    //---------------------------------------------------
+				    // If 'load_data' is false, the 'DataFromSnowflake' step and its dependencies
+				    // will never be executed due to Power Query's lazy evaluation.
+				    FinalTable = if load_data then
+				                    let
+				                        // Connect to Snowflake and execute the native query
+				                        DataFromSnowflake = Value.NativeQuery(
+				                            Snowflake.Databases(
+				                                snowflake_account,
+				                                snowflake_warehouse,
+				                                [Role=snowflake_role, Implementation="2.0"]
+				                            ){[Name=snowflake_database]}[Data], // This sets the Database context
+				                            SQLQuery,
+				                            null,
+				                            [EnableFolding=true]
+				                        ),
+				
+				                        // Transform all column names to lowercase
+				                        LowercaseColumns = Table.TransformColumnNames(DataFromSnowflake, Text.Lower)
+				                    in
+				                        LowercaseColumns
+				                 else
+				                    // If load_data is false, return an empty table with the predefined schema.
+				                    // The #table function automatically applies the types from TableSchema.
+				                    #table(TableSchema, {})
+				
+				in
+				    FinalTable
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

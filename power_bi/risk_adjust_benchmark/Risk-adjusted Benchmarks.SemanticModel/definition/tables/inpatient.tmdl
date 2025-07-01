@@ -1,0 +1,351 @@
+table inpatient
+	lineageTag: 02fa324c-48a2-4883-b2a1-64e89c0e20f8
+
+	column encounter_id
+		dataType: string
+		lineageTag: 8cf1f98f-4566-47df-a8f1-39adff9fed2d
+		summarizeBy: none
+		sourceColumn: encounter_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source
+		dataType: string
+		lineageTag: 50979814-f5fc-4cbe-a8b3-2570cd7f1f45
+		summarizeBy: none
+		sourceColumn: data_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column encounter_start_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 56e1abc1-e16f-42c4-b552-35da0238f009
+		summarizeBy: none
+		sourceColumn: encounter_start_date
+
+		variation Variation
+			isDefault
+			relationship: e0e6abf1-8fb8-4c9c-a1b3-b521f1e25aa8
+			defaultHierarchy: LocalDateTable_e1d539b4-0cb0-43fe-829e-aba2d7454016.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column first_day_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dd92fdc5-9046-41a3-8819-b8f9db718492
+		summarizeBy: none
+		sourceColumn: first_day_of_month
+
+		variation Variation
+			isDefault
+			relationship: 111b4e04-71b4-44a8-9826-90948ce09472
+			defaultHierarchy: LocalDateTable_77f5054b-454e-4b50-92d4-0fb7fc6e2013.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column person_id
+		dataType: string
+		lineageTag: aadfc6b4-5d63-465a-b5ae-16019027145e
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_los
+		dataType: double
+		lineageTag: 2d8571a0-0bd1-4f5b-8cb1-066ba2b10a6d
+		summarizeBy: sum
+		sourceColumn: expected_los
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_los
+		dataType: int64
+		formatString: 0
+		lineageTag: 9df7296f-872e-49d8-b792-6a283828bd7c
+		summarizeBy: sum
+		sourceColumn: actual_los
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_readmission
+		dataType: int64
+		formatString: 0
+		lineageTag: 4985f848-dfee-49aa-a0c7-af89e9f4504b
+		summarizeBy: sum
+		sourceColumn: actual_readmission
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_readmission
+		dataType: double
+		lineageTag: f80c6713-2cb7-4079-bbbd-3dbfb16a8017
+		summarizeBy: sum
+		sourceColumn: expected_readmission
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column readmission_denominator
+		dataType: int64
+		formatString: 0
+		lineageTag: d5cc17ea-7999-421c-8bfc-67a18b00f740
+		summarizeBy: sum
+		sourceColumn: readmission_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_discharge_location
+		dataType: string
+		lineageTag: 0658cc8e-96ec-417c-893b-0d75f1e921cb
+		summarizeBy: none
+		sourceColumn: actual_discharge_location
+
+		annotation SummarizationSetBy = Automatic
+
+	column facility_id
+		dataType: string
+		lineageTag: 18ffe77c-f72c-45b0-8f08-5da364e04414
+		summarizeBy: none
+		sourceColumn: facility_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column facility_name
+		dataType: string
+		lineageTag: 4bce9fd3-94bd-4dc6-98dd-7a612f70f7de
+		summarizeBy: none
+		sourceColumn: facility_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ms_drg_code
+		dataType: string
+		lineageTag: afcb398e-08b7-45e9-a059-671cfd102988
+		summarizeBy: none
+		sourceColumn: ms_drg_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column paid_amount
+		dataType: double
+		lineageTag: 8c76b939-8ebc-44b5-9c6d-2fb83c283746
+		summarizeBy: sum
+		sourceColumn: paid_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_expired
+		dataType: double
+		lineageTag: b13552fe-322b-4423-bf2a-2d8d5c916323
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_expired
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_home
+		dataType: double
+		lineageTag: 47115255-5841-4760-940b-a3d3ccc907bd
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_home
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_home_health
+		dataType: double
+		lineageTag: 69bb5320-16aa-4592-a38d-94e58160f0b9
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_home_health
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_hospice
+		dataType: double
+		lineageTag: 167745ab-0ddc-4158-bb0b-0d3ef19f4ce7
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_hospice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_ipt_rehab
+		dataType: double
+		lineageTag: d086153a-cef7-4eb4-aa05-641de4fe1a49
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_ipt_rehab
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_other
+		dataType: double
+		lineageTag: 595bad11-6203-4559-accf-e0cac7502fae
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_other
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_snf
+		dataType: double
+		lineageTag: 5e5fbea4-1b3a-4489-a871-87245b627f26
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_snf
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discharge_pred_proba_transfer_other_facility
+		dataType: double
+		lineageTag: 69c462c0-8270-497f-a44f-0acd1987796a
+		summarizeBy: sum
+		sourceColumn: discharge_pred_proba_transfer_other_facility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column enrolled_encounter_flag
+		dataType: int64
+		lineageTag: ce53309d-d1b5-4ed7-b92f-38008c42f6bf
+		summarizeBy: sum
+		sourceColumn: enrolled_encounter_flag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition inpatient = m
+		mode: import
+		source = ```
+				let
+				    // 1. Configuration - USER MUST UPDATE THESE VALUES
+				    //---------------------------------------------------
+				    // Define table names using SCHEMA.TABLE format (in UPPERCASE)
+				    main_table          = "BENCHMARKS.PREDICT_INPATIENT",
+				    patient_table       = "CORE.PATIENT",
+				
+				
+				    // 2. Define the schema for the empty table
+				    //---------------------------------------------------
+				    // This defines the table structure (column names and data types)
+				    // that will be used when load_data is false. This ensures the
+				    // data model relationships remain intact.
+				    TableSchema = type table [
+				        encounter_id = Text.Type,
+				        data_source = Text.Type,
+				        encounter_start_date = Date.Type,
+				        first_day_of_month = Date.Type,
+				        person_id = Text.Type,
+				        expected_los = Number.Type,
+				        actual_los = Int64.Type,
+				        actual_readmission = Int64.Type,
+				        expected_readmission = Number.Type,
+				        readmission_denominator = Int64.Type,
+				        actual_discharge_location = Text.Type,
+				        facility_id = Text.Type,
+				        facility_name = Text.Type,
+				        ms_drg_code = Text.Type,
+				        paid_amount = Number.Type,
+				        discharge_pred_proba_expired = Number.Type,
+				        discharge_pred_proba_home = Number.Type,
+				        discharge_pred_proba_home_health = Number.Type,
+				        discharge_pred_proba_hospice = Number.Type,
+				        discharge_pred_proba_ipt_rehab = Number.Type,
+				        discharge_pred_proba_other = Number.Type,
+				        discharge_pred_proba_snf = Number.Type,
+				        discharge_pred_proba_transfer_other_facility = Number.Type,
+				        enrolled_encounter_flag = Int64.Type
+				    ],
+				
+				
+				    // 3. Logic to handle optional row limit parameter
+				    //---------------------------------------------------
+				    // Safely checks if a Power Query parameter named 'row_limit' exists.
+				    safeLimit = try row_limit otherwise null,
+				
+				
+				    // 4. Build the dynamic SQL query for Snowflake
+				    //---------------------------------------------------
+				    SQLQuery =
+				        if safeLimit <> null and safeLimit > 0 then
+				            let
+				                // Convert the numeric limit to text to safely embed in the SQL string
+				                limitText = Number.ToText(safeLimit)
+				            in
+				            "
+				            WITH random_sample AS (
+				                -- Select a deterministic, random sample of PERSON_ID.
+				                -- HASH() is the Snowflake equivalent for creating a deterministic order.
+				                SELECT PERSON_ID
+				                FROM " & patient_table & "
+				                ORDER BY HASH(PERSON_ID)
+				                LIMIT " & limitText & "
+				            )
+				            -- Join the main table against the random sample of persons
+				            SELECT m.*
+				            FROM " & main_table & " AS m
+				            INNER JOIN random_sample AS c
+				                ON m.PERSON_ID = c.PERSON_ID
+				            "
+				        else
+				            // Base query that runs if 'row_limit' is not set
+				            "SELECT * FROM " & main_table,
+				
+				
+				    // 5. Conditionally load data or create an empty table
+				    //---------------------------------------------------
+				    // This is the core logic. Power Query's lazy evaluation means that if
+				    // 'load_data' is false, the 'DataFromSnowflake' step and its dependencies
+				    // (like SQLQuery) will never be executed.
+				    FinalTable = if load_data then
+				                    let
+				                        // Connect to Snowflake and execute the native query
+				                        DataFromSnowflake = Value.NativeQuery(
+				                            Snowflake.Databases(
+				                                snowflake_account,
+				                                snowflake_warehouse,
+				                                [Role=snowflake_role, Implementation="2.0"]
+				                            ){[Name=snowflake_database]}[Data], // This sets the Database context
+				                            SQLQuery,
+				                            null,
+				                            [EnableFolding=true]
+				                        ),
+				                        
+				                        // Transform all column names to lowercase
+				                        LowercaseColumns = Table.TransformColumnNames(DataFromSnowflake, Text.Lower)
+				                    in
+				                        LowercaseColumns
+				                 else
+				                    // If load_data is false, return an empty table with the predefined schema.
+				                    // No database call is made.
+				                    #table(TableSchema, {})
+				in
+				    FinalTable
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

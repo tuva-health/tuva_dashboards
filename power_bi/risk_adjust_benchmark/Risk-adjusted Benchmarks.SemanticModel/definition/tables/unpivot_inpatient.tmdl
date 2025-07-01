@@ -1,0 +1,145 @@
+table unpivot_inpatient
+	lineageTag: 597eabc0-1a70-42e0-90f0-8891b90edd9d
+
+	column encounter_id
+		dataType: string
+		lineageTag: 44552f17-54b9-4e46-90ca-38ba0e0b203f
+		summarizeBy: none
+		sourceColumn: encounter_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_id
+		dataType: string
+		lineageTag: 5709f6f8-e0b2-4a9f-8743-7bcb49aeda14
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column discharge_location
+		dataType: string
+		lineageTag: 93561e40-4007-415f-8d89-7b9ab4ff21b2
+		summarizeBy: none
+		sourceColumn: discharge_location
+
+		annotation SummarizationSetBy = Automatic
+
+	column eva
+		dataType: string
+		lineageTag: 09586034-14ec-4b02-bb75-5528d1ca4a9c
+		summarizeBy: none
+		sourceColumn: eva
+
+		annotation SummarizationSetBy = Automatic
+
+	column discharge_location_long
+		dataType: double
+		formatString: 0
+		lineageTag: b97807eb-e420-4d3e-933f-829c57787c51
+		summarizeBy: sum
+		sourceColumn: discharge_location_long
+
+		annotation SummarizationSetBy = Automatic
+
+	column tuva_last_run
+		dataType: string
+		lineageTag: dba099c7-90de-4e9d-a38f-91f59987db76
+		summarizeBy: none
+		sourceColumn: tuva_last_run
+
+		annotation SummarizationSetBy = Automatic
+
+	partition unpivot_inpatient = m
+		mode: import
+		source =
+				let
+				    // 1. Configuration - USER MUST UPDATE THESE VALUES
+				    //---------------------------------------------------
+				    // Define table names using SCHEMA.TABLE format (in UPPERCASE)
+				    main_table          = "BENCHMARKS.BENCHMARKS_UNPIVOT_INPATIENT",
+				    patient_table       = "CORE.PATIENT",
+				
+				
+				    // 2. Define the schema for the empty table
+				    //---------------------------------------------------
+				    // This defines the table structure (column names and data types)
+				    // that will be used when load_data is false.
+				    TableSchema = type table [
+				        encounter_id = Text.Type,
+				        person_id = Text.Type,
+				        discharge_location = Text.Type,
+				        eva = Text.Type,
+				        discharge_location_long = Number.Type,
+				        tuva_last_run = Text.Type
+				    ],
+				
+				
+				    // 3. Logic to handle optional row limit parameter
+				    //---------------------------------------------------
+				    // Safely checks if a Power Query parameter named 'row_limit' exists.
+				    safeLimit = try row_limit otherwise null,
+				
+				
+				    // 4. Build the dynamic SQL query for Snowflake
+				    //---------------------------------------------------
+				    SQLQuery =
+				        if safeLimit <> null and safeLimit > 0 then
+				            let
+				                // Convert the numeric limit to text to safely embed in the SQL string
+				                limitText = Number.ToText(safeLimit)
+				            in
+				            "
+				            WITH random_sample AS (
+				                -- Select a deterministic, random sample of PERSON_ID.
+				                -- HASH() is the Snowflake equivalent for creating a deterministic order.
+				                SELECT PERSON_ID
+				                FROM " & patient_table & "
+				                ORDER BY HASH(PERSON_ID)
+				                LIMIT " & limitText & "
+				            )
+				            -- Join the main table against the random sample of persons
+				            SELECT m.*
+				            FROM " & main_table & " AS m
+				            INNER JOIN random_sample AS c
+				                ON m.PERSON_ID = c.PERSON_ID
+				            "
+				        else
+				            // Base query that runs if 'row_limit' is not set
+				            "SELECT * FROM " & main_table,
+				
+				
+				    // 5. Conditionally load data or create an empty table
+				    //---------------------------------------------------
+				    // If 'load_data' is false, the 'DataFromSnowflake' step and its dependencies
+				    // will never be executed due to Power Query's lazy evaluation.
+				    FinalTable = if load_data then
+				                    let
+				                        // Connect to Snowflake and execute the native query
+				                        DataFromSnowflake = Value.NativeQuery(
+				                            Snowflake.Databases(
+				                                snowflake_account,
+				                                snowflake_warehouse,
+				                                [Role=snowflake_role, Implementation="2.0"]
+				                            ){[Name=snowflake_database]}[Data], // This sets the Database context
+				                            SQLQuery,
+				                            null,
+				                            [EnableFolding=true]
+				                        ),
+				
+				                        // Transform all column names to lowercase
+				                        LowercaseColumns = Table.TransformColumnNames(DataFromSnowflake, Text.Lower)
+				                    in
+				                        LowercaseColumns
+				                 else
+				                    // If load_data is false, return an empty table with the predefined schema.
+				                    // The #table function automatically applies the types from TableSchema.
+				                    #table(TableSchema, {})
+				
+				in
+				    FinalTable
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

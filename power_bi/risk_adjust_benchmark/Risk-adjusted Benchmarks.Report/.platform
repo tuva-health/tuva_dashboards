@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Risk-adjusted Benchmarks"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "01145ae2-459f-4550-8ba0-c1eb4d57c10f"
+  }
+}
